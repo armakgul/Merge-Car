@@ -7,25 +7,22 @@ public class CameraMovement : MonoBehaviour
     //Bu blok kameranın karakteri takip etmesini sağlayacak
 
     public Camera FollowUpCamera;
-
     public GameObject objectToFollow;
+    public Vector3 cameraOffset;
 
 
     void Start() {
-        objectToFollow = GameObject.FindGameObjectWithTag("Player"); 
-        CameraPosition initialCameraPos = new CameraPosition(objectToFollow.transform.position + new Vector3(0,4,-50));
+        objectToFollow = GameObject.FindGameObjectWithTag("Player");  
+    }
+
+    void Update() {
+        MoveCamera(cameraOffset);
     }
     
 
-    void Update() {
-            
+    public void MoveCamera(Vector3 offset) {
+        FollowUpCamera.transform.position =  objectToFollow.transform.position + offset;
     }
 
-    public class CameraPosition {
-        
-        Vector3 cameraPosition = new Vector3();
-        public CameraPosition(Vector3 initialPosition) {
-            cameraPosition = initialPosition;
-        }
-    }
+   
 }
