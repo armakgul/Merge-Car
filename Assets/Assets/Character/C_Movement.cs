@@ -7,50 +7,66 @@ public class C_Movement : MonoBehaviour
     // bu script sadece karaktere sabit hız hareket verecek
     // physic olmayacak
 
+    // pos aldığı kamera
     [SerializeField] public Camera orthoCamera;
     [SerializeField] public float cameraCorrectionMultiplier;
     public GameObject player;
     public Vector3 p_position;
     public float p_ForwardSpeed = 1;
 
+    //mouse drag distance
+     Vector3 mouseDistance = Vector3.zero;
+     Vector3 lastPosition;
+     bool trackMouse = false;
+
+
 
 
     public void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
-        p_position = player.transform.position;
+ 
     }
 
     public void Update() {
-        
         MousePosition();
-        Debug.Log(MousePosition());
-        MoveCharacter( MousePosition(), p_position, p_ForwardSpeed);
-        
+        MoveCharacter(mouseDistance.x, p_ForwardSpeed);
     }
 
 
-    public float MousePosition() {
-        /*
-        Ray ray = orthoCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit))
+    //Mouse pozisyonu x ekseninde alınıp karaktere atanıyor
+    public void MousePosition() {
+        
+        if (Input.GetMouseButtonDown(0))
         {
-            transform.position = raycastHit.point;
+            trackMouse = true;
+            lastPosition = orthoCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x , Input.mousePosition.y , orthoCamera.nearClipPlane+1));
         }
-        */
 
-        if (Input.touchCount > 0)
+
+
+        else if (Input.GetMouseButtonUp(0))
         {
-            return orthoCamera.ScreenToWorldPoint(Input.mousePosition).x; 
-        } else return 0;
-
+        trackMouse = false;
+        Debug.Log ("Mouse moved " + mouseDistance + " while button was down.");
+        //mouseDistance = mouseDistance;   
+        }
         
-        
+        if (trackMouse)
+            {
+                Vector3 newPosition = orthoCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x , Input.mousePosition.y , orthoCamera.nearClipPlane+1));
+                
+                mouseDistance = mouseDistance + (newPosition - lastPosition);
+                
+                lastPosition = newPosition;
+            }
 
     }
 
-    public void MoveCharacter(float xPos, Vector3 position, float speed) {
 
-        player.transform.position = new Vector3(xPos/cameraCorrectionMultiplier, 0.51f , position.z + Time.deltaTime * speed);
+
+    public void MoveCharacter(float xPos , float speed) {
+
+        player.transform.position = new Vector3(Mathf.Clamp(xPos/cameraCorrectionMultiplier, -4.5f, + 4.5f), 0.51f , player.transform.position.z + Time.deltaTime * speed);
 
     }
 }
