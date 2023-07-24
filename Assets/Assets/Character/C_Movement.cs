@@ -47,8 +47,6 @@ public class C_Movement : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
         trackMouse = false;
-        Debug.Log ("Mouse moved " + mouseDistance + " while button was down.");
-        //mouseDistance = mouseDistance;   
         }
         
         if (trackMouse)
