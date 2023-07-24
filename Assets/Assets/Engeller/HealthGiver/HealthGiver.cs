@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class HealthGiver : MonoBehaviour
 {
-    
-
     public float cureAmount;
 
 
