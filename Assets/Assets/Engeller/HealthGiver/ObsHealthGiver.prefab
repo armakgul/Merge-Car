@@ -627,7 +627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e423bb62e94e0db47b58813d5e5c6fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cureAmount: 5
+  cureAmountTange: 5
+  colorForPos: {r: 0.7372549, g: 0.93333334, b: 0.74509805, a: 0.5882353}
+  colorForNeg: {r: 1, g: 0, b: 0, a: 0.5882353}
 --- !u!114 &437963378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,7 +645,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   description: {fileID: 0}
   sprite: {fileID: 0}
-  value: 5
+  shieldorhealth: 0
 --- !u!1 &3676801223692746433
 GameObject:
   m_ObjectHideFlags: 0

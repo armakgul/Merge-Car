@@ -6,6 +6,7 @@ using TMPro;
 
 public class O_Canvas : MonoBehaviour
 {
+
     [Header("CANVAS")]
     [SerializeField] public TMP_Text valueText, description;
     [SerializeField] public Sprite sprite;
@@ -16,31 +17,30 @@ public class O_Canvas : MonoBehaviour
     
     [SerializeField] ShieldOrHealth shieldorhealth;
 
-    [SerializeField] float value;
+    private float value;
 
     private void Start() {
-        valueText = gameObject.transform.Find("ValueText").GetComponent<TMP_Text>();
-        valueText.text = value.ToString();
-
-        description = gameObject.transform.Find("Description").GetComponent<TMP_Text>();
+        
+        valueText = transform.Find("Canvas/ValueText").GetComponent<TMP_Text>();
+        
+        description = transform.Find("Canvas/Description").GetComponent<TMP_Text>();
         
         switch (shieldorhealth)
         {
             case ShieldOrHealth.shieldGiver:
             description.text = "SHIELD";
+            value = GetComponent<ShieldGiver>().GetShieldAmount();
             break;
 
             case ShieldOrHealth.healthGiver:
             description.text = "HEALTH";
+            value = GetComponent<HealthGiver>().GetCureAmount();
             break;
 
         }
-        
 
+        valueText.text = value.ToString();
        
     }
-
-
-
 
 }
