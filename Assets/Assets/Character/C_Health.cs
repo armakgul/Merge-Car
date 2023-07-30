@@ -5,13 +5,17 @@ using TMPro;
 
 public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 {
+    [Header ("CONSTRUCTORS")]
     [SerializeField] public float health;
-    [SerializeField] public float damage;
-
+ 
     [SerializeField] public float shield;
 
+    [Header ("TEXTS")]
     public TMP_Text healthText;
     public TMP_Text shieldText;
+
+    [Header ("SCRIPTS")]
+    public LevelManager levelManager;
 
     private void Start() {
         
@@ -26,11 +30,33 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
     // WHAT HAPPENS IF TAKES HIT
     public void Hit(float damageAmount) {   
 
-        health -= damageAmount;
+        if (shield > 0)
+        {
+            shield -= damageAmount;
+            healthText.text = health.ToString();
+            shieldText.text = shield.ToString();
+            
+        } else  
+        {
+            shield = 0;
+            health -= damageAmount;
+            healthText.text = health.ToString();
+            shieldText.text = shield.ToString();
+        }
+        
+        
 
         if (health<=0)
         {            
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            
+            if (levelManager != null)
+            {
+                levelManager.Level3Starts();
+            } else Debug.Log("level manager is not assigned !!!");
+
+            health = 0;
+ 
         } 
 
     }
@@ -45,7 +71,6 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
         shield += shieldAmount;
         shieldText.text = shield.ToString();
     }
-
 
     #region INTERFACE
         
@@ -63,18 +88,4 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 
     #endregion
 
-
-    // TRIGGER
-    private  void OnTriggerEnter(Collider other) {
-        
-        if (other.CompareTag("Obs")) 
-        { 
-            
-            IDamagable damagable = other.GetComponent<IDamagable>();
-            if (damagable != null)
-            {
-                damagable.Damage(damage);
-            }
-        } 
-    }
 }

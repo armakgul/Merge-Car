@@ -5,7 +5,6 @@ using UnityEngine;
 public class O_Health : MonoBehaviour, IDamagable
 {
     [SerializeField] public float health;
-    [SerializeField] public float damage;
 
     public void Hit(float damageAmount) {   
 

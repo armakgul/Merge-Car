@@ -11,7 +11,7 @@ public class O_Canvas : MonoBehaviour
     [SerializeField] public TMP_Text valueText, description;
     [SerializeField] public Sprite sprite;
     
-    enum ShieldOrHealth {healthGiver, shieldGiver};
+    enum ShieldOrHealth {healthGiver, shieldGiver, speedGiver, weightReducer, moneyGiver};
 
     [Header("OBS TYPE")]
     
@@ -25,6 +25,12 @@ public class O_Canvas : MonoBehaviour
         
         description = transform.Find("Canvas/Description").GetComponent<TMP_Text>();
         
+        SwitchBetweenObs();
+       
+    }
+
+    public void SwitchBetweenObs () {
+
         switch (shieldorhealth)
         {
             case ShieldOrHealth.shieldGiver:
@@ -37,10 +43,25 @@ public class O_Canvas : MonoBehaviour
             value = GetComponent<HealthGiver>().GetCureAmount();
             break;
 
+            case ShieldOrHealth.speedGiver:
+            //description.text = "HEALTH";
+            value = GetComponent<SpeedGiver>().damageAmount;
+            break;
+
+            case ShieldOrHealth.weightReducer:
+            //description.text = "HEALTH";
+            value = GetComponent<WeightReducer>().damageAmount;
+            break;
+
+            case ShieldOrHealth.moneyGiver:
+            //description.text = "HEALTH";
+            value = GetComponent<MoneyGiver>().damageAmount;
+            break;
+
         }
 
         valueText.text = value.ToString();
-       
+
     }
 
 }

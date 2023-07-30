@@ -137,7 +137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.33, y: 1.5}
+  m_AnchoredPosition: {x: 0.33, y: 1.23}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &698469991
@@ -177,8 +177,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290208260
-  m_fontColor: {r: 0.01568627, g: 0.3850027, b: 0.7176471, a: 1}
+    rgba: 4290228740
+  m_fontColor: {r: 0.01568627, g: 0.6972378, b: 0.7176471, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 8791045466331989278}
   - component: {fileID: 2069257137}
   - component: {fileID: 8791045466331989250}
+  - component: {fileID: 3086131321933574808}
   - component: {fileID: 2069257136}
   m_Layer: 0
   m_Name: Player
@@ -507,6 +508,19 @@ MonoBehaviour:
   player: {fileID: 0}
   p_position: {x: 0, y: 0, z: 0}
   p_ForwardSpeed: 25
+--- !u!114 &3086131321933574808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791045466331989277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd68d08d2988f242a2c2437e4ff33fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!114 &2069257136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,9 +534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 100
+  shield: 0
   healthText: {fileID: 0}
-  healthScript: {fileID: 0}
+  shieldText: {fileID: 0}
 --- !u!1001 &7299125727571659386
 PrefabInstance:
   m_ObjectHideFlags: 0
