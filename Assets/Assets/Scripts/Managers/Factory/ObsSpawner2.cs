@@ -18,6 +18,9 @@ public class ObsSpawner2 : MonoBehaviour
 
     public List<GameObject> spawnedObstacles = new List<GameObject>();
 
+
+    
+
     public void SpawnObstacleSets()
     {
         ObsFactory.ObstacleType[] obstacleTypes = (ObsFactory.ObstacleType[])System.Enum.GetValues(typeof(ObsFactory.ObstacleType));

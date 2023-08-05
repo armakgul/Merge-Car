@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 {
@@ -16,6 +17,9 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 
     [Header ("SCRIPTS")]
     public LevelManager levelManager;
+
+
+    public event Action onHealthIsZero;
 
     private void Start() {
         
@@ -49,10 +53,12 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
         // DEATH SECTION
         if (health<=0)
         {            
-            if (levelManager != null)
-            {
-                levelManager.Level3Starts();
-            } else Debug.Log("level manager is not assigned !!!");
+            //levelManager.Level3Starts();
+
+                if (onHealthIsZero != null)
+                {
+                    onHealthIsZero();
+                }
 
             health = 0;
  

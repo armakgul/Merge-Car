@@ -874,6 +874,7 @@ Transform:
   m_Children:
   - {fileID: 1609793110}
   - {fileID: 1892748999}
+  - {fileID: 2027531129}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1383,8 +1384,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1067739535}
   - component: {fileID: 1067739536}
+  - component: {fileID: 1067739537}
   m_Layer: 0
-  m_Name: LevelTriggers
+  m_Name: Section2Trigger
   m_TagString: Section2Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1419,6 +1421,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.56592, y: 1.6565373, z: 0.20687866}
   m_Center: {x: -0.2139349, y: -0.3282689, z: 0.39656067}
+--- !u!114 &1067739537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067739534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06405ff80d3e12a4aa0d9d22a5519056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1163521009 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8791045466331989250, guid: c3506f63fbbd02545ab6fceb0aadf2b6,
@@ -1932,6 +1946,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1388022421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2069257136, guid: c3506f63fbbd02545ab6fceb0aadf2b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8791045467090558320}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7515c279a567fe444bbc8788fc472ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1609793108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,9 +1968,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1609793110}
   - component: {fileID: 1609793109}
-  - component: {fileID: 1609793111}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: EconomyManager
   m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1977,21 +2002,6 @@ Transform:
   m_Father: {fileID: 548383122}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1609793111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609793108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fef22d18780b65545a1cdc95065127ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obsSpawner2: {fileID: 1892749002}
-  movement: {fileID: 1163521009}
-  ramp: {fileID: 1255676012}
 --- !u!1 &1705097444
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,6 +2445,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003410582}
   m_CullTransparentMesh: 1
+--- !u!1 &2027531128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2027531129}
+  - component: {fileID: 2027531130}
+  m_Layer: 0
+  m_Name: SectionManagement
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2027531129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027531128}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 308.95215, y: 1497.0388, z: -1401.8326}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 548383122}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2027531130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027531128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef22d18780b65545a1cdc95065127ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sectionTwoTrigger: {fileID: 1067739537}
+  obsSpawner2: {fileID: 1892749002}
+  characterMovementScript: {fileID: 1163521009}
+  characterHealthScript: {fileID: 1388022421}
+  ramp: {fileID: 1255676012}
 --- !u!1001 &8791045467090558320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2449,7 +2508,7 @@ PrefabInstance:
     - target: {fileID: 2069257136, guid: c3506f63fbbd02545ab6fceb0aadf2b6, type: 3}
       propertyPath: levelManager
       value: 
-      objectReference: {fileID: 1609793111}
+      objectReference: {fileID: 2027531130}
     - target: {fileID: 2069257137, guid: c3506f63fbbd02545ab6fceb0aadf2b6, type: 3}
       propertyPath: m_Mass
       value: 1
@@ -2541,7 +2600,7 @@ PrefabInstance:
     - target: {fileID: 8791045466331989250, guid: c3506f63fbbd02545ab6fceb0aadf2b6,
         type: 3}
       propertyPath: p_ForwardSpeed
-      value: 25
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8791045466331989277, guid: c3506f63fbbd02545ab6fceb0aadf2b6,
         type: 3}

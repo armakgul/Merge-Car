@@ -50,13 +50,14 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
     // ...you can add other actions you want to do when game starts, like animations.
     }
 
-        
         if (!gameStarted)
     {
         return;
     }
+
         MousePosition();
         MoveCharacter(mouseDistance.x, p_ForwardSpeed);
+   
     }
 
 
