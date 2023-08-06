@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ObsSpawner2 : MonoBehaviour
 {
@@ -15,10 +16,21 @@ public class ObsSpawner2 : MonoBehaviour
 
     public float spawnOffset;   
 
+    public LevelManager levelManager;
+
 
     public List<GameObject> spawnedObstacles = new List<GameObject>();
 
 
+    public void OnEnable() {
+        levelManager.OnSectionTwoStarted += SpawnObstacleSets;
+        levelManager.OnSectionThreeStarted += DeactivateObstacles;
+    }
+
+    public void OnDisable() {
+        levelManager.OnSectionTwoStarted -= SpawnObstacleSets;
+        levelManager.OnSectionThreeStarted -= DeactivateObstacles;
+    }
     
 
     public void SpawnObstacleSets()

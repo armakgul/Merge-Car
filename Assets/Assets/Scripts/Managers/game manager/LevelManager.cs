@@ -1,23 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class LevelManager : MonoBehaviour
-{
+{    
+    public GameStates currentState;
 
-    //this section will collect section triggers
-    //also collects effected scripts
-    //char velo -- camera events -- rb -- gravity -- 
-
-    //private GameModes mode = GameModes.start;
-
-
-    public SectionTwoTrigger sectionTwoTrigger;
-    public ObsSpawner2 obsSpawner2;
-    public C_Movement characterMovementScript;
-    public C_Health characterHealthScript;
-    public GameObject ramp;
-
+    //public event Action OnSectionOneStarted;
+    public event Action OnSectionTwoStarted;
+    public event Action OnSectionThreeStarted;
+    
 
     #region Singleton
     public static LevelManager Instance { get; private set; }
@@ -35,168 +28,110 @@ public class LevelManager : MonoBehaviour
         }
     }
     #endregion
+   
+    public enum GameStates {
+        start,
+        section1,
+        section2,
+        section3,
+        freefall,
+        UI
+    }
+    
+    public GameObject ramp;
+
+
+    private void Start() {   
+        
+        SetState(GameStates.start);
+
+        ramp.SetActive(false);
+    }
+
+    private void Update() 
+    {
+        CheckInitialTap();
+    }
+
+
+    public void SetState (GameStates state) {
+        currentState = state;
+
+        switch(state) {
+            case GameStates.start:
+            currentState = GameStates.start;
+            break;
+
+            case GameStates.section1:
+            currentState = GameStates.section1;
+            //OnSectionOneStarted();
+            break;
+
+            case GameStates.section2:
+            currentState = GameStates.section2;
+            OnSectionTwoStarted();
+            break;
+            
+            case GameStates.section3:
+            currentState = GameStates.section3;
+            OnSectionThreeStarted();
+            break;
+
+            case GameStates.freefall:
+            currentState = GameStates.freefall;
+            break;
+
+            case GameStates.UI:
+            currentState = GameStates.UI;
+            break;
+
+        }
+            
+    }
+
+    public GameStates GetState() {
+        return currentState;
+    }
+
+
+    // check initial tap status
+    // start if clicked/tapped
+   public void CheckInitialTap() {
+    
+    if (GetState() == GameStates.start)
+    {
+        if (Input.GetMouseButtonDown(0))  // 0 for left click (or a single touch)
+        {
+            
+            SetState(GameStates.section1);
+            Debug.Log("section 1 started");
+        } else return;
+    }
+    
+    
+   }
+
+
+
+
 
 
 
     private void OnEnable() {
-        sectionTwoTrigger.onSectionTwoStarted += obsSpawner2.SpawnObstacleSets;
-        characterHealthScript.onHealthIsZero += Level3Starts;
+        
+        OnSectionThreeStarted += SetRampActive;
     }
 
 
     private void OnDisable() {
-        sectionTwoTrigger.onSectionTwoStarted -= obsSpawner2.SpawnObstacleSets;
-        characterHealthScript.onHealthIsZero -= Level3Starts;
+        OnSectionThreeStarted -= SetRampActive;
     }
 
-
-    private void Start() {
-        ramp.SetActive(false);
-    }
-
-    public void SetAllActiveFalse () {
-        obsSpawner2.DeactivateObstacles();
-    }
-
-    public void SetRBtoDynamic() {
-
-        characterMovementScript.rb.isKinematic = false;
-        characterMovementScript.rb.useGravity = true;
-    }
 
     public void SetRampActive()
     {
         ramp.SetActive(true);
     }
 
-    public void SectionChanges () {
-        characterMovementScript.section1or2 = false;
-        characterMovementScript.section3 = true;
-    }
     
-    public void Level3Starts() {
-        SetRampActive();
-        SectionChanges();
-        SetRBtoDynamic();
-        SetAllActiveFalse();
-    }
-
-
-
-
-
-
-    /*
-    public enum GameModes {
-        start, // upgrades active. Trigger with Tap
-        sectionOne, // only section 1. Triggered with Tap
-        sectionTwo, // triggerred with section two trigger
-        sectionThree, // triggered with C_health health value
-        rewardGainUI // triggered with next button
-
-    }
-
-    public class StartState : IGameMode 
-    {
-        public IGameMode DoState(LevelManager mode) 
-        {
-
-        }
-
-
-        public void StartActions() 
-        {
-        //Upgradeler aktif
-        //Player doğuk
-        // Player hızı 0 - boolean
-        //İlk seciton doğmuş olcak
-        //upgradeler karakteri ve ekonomiyi etkileyecek
-        // para akışı aktif
-
-        }
-
-    }
-
-    public class SectionOneState : IGameMode 
-    {
-        public IGameMode DoState(LevelManager mode) 
-        {
-            
-        }
-    
-        public void SectionOneStarts() {
-        //Upgradeleri kaldır
-        //sabit hızda player hareketi
-        //para akışı aktif - delegate
-        //5 player özelliği aktif ve değişiyor - delegate
-
-    }
-    }
-
-    public class SectionTwoState : IGameMode 
-    {
-        public IGameMode DoState(LevelManager mode) 
-        {
-            
-        }
-    
-       private void SectionTwoStarts() {
-        //hız artıyor
-        //obs2 doğacak
-        }
-    }
-
-    public class SectionThreeState : IGameMode 
-    {
-        public IGameMode DoState(LevelManager mode) 
-        {
-            
-        }
-    
-       void SectionThreeStarts () {
-        //rb aktif
-        //gravity aktif
-        // kamera değşiyor
-        // hız hesaplanıp değşiyor
-        // mouse kontrolü kapalı
-    }
-    }
-
-    public class FreeFallState : IGameMode 
-    {
-        public IGameMode DoState(LevelManager mode) 
-        {
-            
-        }
-    
-       void FreeJumpStateStarts () {
-        // three den kalanlar aynı
-        //cinematic
-        }
-    }
-    
-
-    public class RewardState : IGameMode 
-    {
-        public IGameMode DoState(LevelManager mode) 
-        {
-            
-        }
-    
-       void RewardGainUIStarts () 
-       {
-        //oyuncu hızı 0
-        // kamera dönüyor
-        // önde kazanç UI - bak
-        //rewarded reklam ve rulet
-        }
-    }
-    
-
-    public interface IGameMode
-    {
-        IGameMode DoState(LevelManager mode);
-    }
-
-    */
 }

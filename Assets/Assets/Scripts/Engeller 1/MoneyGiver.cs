@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MoneyGiver : MonoBehaviour
 {
-     public float moneyAmount;
+     public int moneyAmount;
 
     public float damageAmount;
 
     public GameObject gameManager;
 
     private void Start() {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        gameManager = GameObject.FindGameObjectWithTag("EconomyManager");
     }
 
     private  void OnTriggerEnter(Collider other) {
@@ -28,7 +28,7 @@ public class MoneyGiver : MonoBehaviour
             if (damagable != null)
             {
                 damagable.Damage(damageAmount);
-                Debug.Log("ASDFASDFA");
+                //Debug.Log("ASDFASDFA");
             }
         }
             

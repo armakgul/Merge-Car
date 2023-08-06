@@ -8,6 +8,8 @@ TagManager:
   - Obs
   - Section2Trigger
   - GameManager
+  - EconomyManager
+  - SectionManager
   layers:
   - Default
   - TransparentFX

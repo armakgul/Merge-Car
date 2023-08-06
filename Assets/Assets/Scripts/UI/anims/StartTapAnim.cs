@@ -11,7 +11,7 @@ public class StartTapAnim : MonoBehaviour
     void Start() {  
 
     animator = GetComponent<Animator>();
-    
+    /*
     if (!movementScript.gameStarted)
     {
         animator.speed = 1;
@@ -20,6 +20,7 @@ public class StartTapAnim : MonoBehaviour
         animator.speed = 0;
         animator.enabled = false;   
     }
-    
+    */
     }
+    
 }
