@@ -34,12 +34,6 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 
     // WHAT HAPPENS IF TAKES HIT
     public void Hit(float damageAmount) {   
- 
-        // shield - amount > 0 ise shield dan çıkar başka birşey yapma
-        //shield - damage amount 0 veya küçükse shield = 0
-            // shield - damage amount tun absolut değerini healtten çıkar
-        // health - damage amount 0 dan küçükse level 1 deyse biter
-        // level 3 teyse devam et
         
         if ((shield - damageAmount) > 0)
         {
@@ -59,10 +53,6 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
         if (health<=0)
         {            
             levelManager.SetState(LevelManager.GameStates.section3);
-
-            // level managerdan sctionu al
-            // bir veya iki ise oyun biter
-            // üç ise obslar kapanır ve devam eder
             health = 0;
             UpdateUI();
         } 
@@ -71,8 +61,18 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 
     // WHAT HAPPENS IF GETS CURED
     public void GetCured( float healthAmount) {
-        health += healthAmount;
-        UpdateUI();
+        if ((shield + healthAmount) > 0)
+        {
+            shield += healthAmount;
+            UpdateUI();
+            
+        } else 
+        {
+            float restDamage = MathF.Abs(shield + healthAmount);
+            shield = 0;
+            health -= restDamage;
+            UpdateUI();
+        }
     }
 
     public void GetShield (float shieldAmount) {

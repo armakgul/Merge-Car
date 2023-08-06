@@ -3,7 +3,117 @@ guid: 6585a8f3a7687894f9f5cfd5345b1763
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_BrickSmall_01_red
+    second: {fileID: 2100000, guid: c81f07278f9f89c48b4aacf2ad29d250, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_ColorPalette
+    second: {fileID: 2100000, guid: d1c33aa5dd0574245b2b7d84a0fc0efd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_GlassBasic
+    second: {fileID: 2100000, guid: 1f6e148b9c1ca9641bb4d9ae4178d782, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Panels_01_brown
+    second: {fileID: 2100000, guid: b3417e35e9d274948a10be17d661e38e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Parquet_01
+    second: {fileID: 2100000, guid: 3a7b197bc4a46e640b119a5bb4b04e40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Planks_01
+    second: {fileID: 2100000, guid: e0b5e6d3cd573d24f98cf9c4189a231a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Tiles_01
+    second: {fileID: 2100000, guid: ad7c502022d3e614daac6fb39f5380a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Tiles_09
+    second: {fileID: 2100000, guid: 33624e928e3a9ba4f804abc517ee1d6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Tiles_Wall_02
+    second: {fileID: 2100000, guid: 21412cc3190d8674092a289844e21a22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Tiles_Wall_10
+    second: {fileID: 2100000, guid: dd5cb289660c72e4388c2a331d78cf47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Wallpaper_01_blue
+    second: {fileID: 2100000, guid: f7f21d2708a102b4288503ccd343e01d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Wallpaper_11
+    second: {fileID: 2100000, guid: 2eb7ba8f0900acc4d99d15a1e23da022, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Wallpaper_13
+    second: {fileID: 2100000, guid: 43c22556114d49b4b9ee8197de2f44e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Wallpaper_15
+    second: {fileID: 2100000, guid: 57882386a2af42d42926243ed1f01705, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Wallpaper_16
+    second: {fileID: 2100000, guid: 4adba87a4359edf45b13ded17994e2ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_matteBrown
+    second: {fileID: 2100000, guid: 0eee0330bdfd1954a8c9034509205fed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_matteDarkBrown
+    second: {fileID: 2100000, guid: 31da5585e1f411948b8bd437c89f0585, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_matteDarkGreen
+    second: {fileID: 2100000, guid: e5f04f656eb5c21459ae0af85340897c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_matteGrey
+    second: {fileID: 2100000, guid: 5441e95c1206d1a4a96f18678fd16f06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_matteViolet
+    second: {fileID: 2100000, guid: 7ed75842213505e4ea64e3d83d2c6b0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_matteWhite
+    second: {fileID: 2100000, guid: 79ee30ca05f120b48983499f1e1b148c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_BaseColorPalette
+    second: {fileID: 2100000, guid: 047e9ab7f011a9942b69fad47470fe73, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

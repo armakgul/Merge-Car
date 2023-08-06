@@ -382,7 +382,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6585a8f3a7687894f9f5cfd5345b1763,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1189.6
+      value: 1229.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6585a8f3a7687894f9f5cfd5345b1763,
         type: 3}
@@ -3413,6 +3413,11 @@ PrefabInstance:
       propertyPath: orthoCamera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 8791045466331989250, guid: c3506f63fbbd02545ab6fceb0aadf2b6,
+        type: 3}
+      propertyPath: p_ForwardSpeed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8791045466331989277, guid: c3506f63fbbd02545ab6fceb0aadf2b6,
         type: 3}
       propertyPath: m_Name
