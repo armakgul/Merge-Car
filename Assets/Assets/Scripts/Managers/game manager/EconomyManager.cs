@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EconomyManager : MonoBehaviour
 {
-    private float money = 100;
+
+    private int money = 100;
+
+    public delegate void OnMoneyChanged(int money);
+    public static event OnMoneyChanged onMoneyChanged;
+    
 
     // float moneyIncrement = 0;
-
+    
+    /*
     #region Singleton
     public static EconomyManager Instance { get; private set; }
 
@@ -24,13 +31,27 @@ public class EconomyManager : MonoBehaviour
         }
     }
     #endregion
+    */
 
+    public void Start() {
+        money = PlayerPrefs.GetInt("Money", 100);
+       
+        onMoneyChanged?.Invoke(money);
+    }
 
     public float GetMoney() {
         return money;
     }
+    
 
-    public void SetMoney (float moneyIncrement) {
-        money += moneyIncrement;
+    public void SetMoney (int amount) {
+        money += amount;
+  
+        PlayerPrefs.SetInt("Money", money);
+        PlayerPrefs.Save();
+
+        onMoneyChanged?.Invoke(money);
     }
+
+
 }

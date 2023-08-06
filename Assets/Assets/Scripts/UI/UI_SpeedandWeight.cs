@@ -10,12 +10,12 @@ public class UI_SpeedandWeight : MonoBehaviour
     public TMP_Text moneyText;
 
     private GameObject player;
-    private GameObject gameManager;
+    private GameObject economyManager;
 
     private void Start() {
         
         player = GameObject.FindGameObjectWithTag("Player");
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        economyManager = GameObject.FindGameObjectWithTag("EconomyManager");
 
         speedText = transform.Find("SpeedandWeight/Speedvalue").GetComponent<TMP_Text>();
         weightText = transform.Find("SpeedandWeight/Weightvalue").GetComponent<TMP_Text>();
@@ -32,6 +32,6 @@ public class UI_SpeedandWeight : MonoBehaviour
         
         speedText.text = player.GetComponent<C_Movement>().speed.ToString();
         weightText.text = player.GetComponent<C_Movement>().weight.ToString();
-        moneyText.text = gameManager.GetComponent<EconomyManager>().GetMoney().ToString();
+        moneyText.text = economyManager.GetComponent<EconomyManager>().GetMoney().ToString();
     }
 }

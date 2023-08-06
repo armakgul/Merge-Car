@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 {
@@ -17,6 +18,9 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
     [Header ("SCRIPTS")]
     public LevelManager levelManager;
 
+
+    //public event Action onHealthIsZero;
+
     private void Start() {
         
         healthText = GameObject.Find("Health").GetComponent<TMP_Text>();
@@ -30,17 +34,24 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 
     // WHAT HAPPENS IF TAKES HIT
     public void Hit(float damageAmount) {   
-
-        if (shield > 0)
+ 
+        // shield - amount > 0 ise shield dan çıkar başka birşey yapma
+        //shield - damage amount 0 veya küçükse shield = 0
+            // shield - damage amount tun absolut değerini healtten çıkar
+        // health - damage amount 0 dan küçükse level 1 deyse biter
+        // level 3 teyse devam et
+        
+        if ((shield - damageAmount) > 0)
         {
             shield -= damageAmount;
             healthText.text = health.ToString();
             shieldText.text = shield.ToString();
             
-        } else  
+        } else 
         {
+            float restDamage = MathF.Abs(shield - damageAmount);
             shield = 0;
-            health -= damageAmount;
+            health -= restDamage;
             healthText.text = health.ToString();
             shieldText.text = shield.ToString();
         }
@@ -49,13 +60,13 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
         // DEATH SECTION
         if (health<=0)
         {            
-            if (levelManager != null)
-            {
-                levelManager.Level3Starts();
-            } else Debug.Log("level manager is not assigned !!!");
+            levelManager.SetState(LevelManager.GameStates.section3);
 
+            // level managerdan sctionu al
+            // bir veya iki ise oyun biter
+            // üç ise obslar kapanır ve devam eder
             health = 0;
- 
+            healthText.text = health.ToString();
         } 
 
     }
@@ -67,8 +78,20 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
     }
 
     public void GetShield (float shieldAmount) {
-        shield += shieldAmount;
-        shieldText.text = shield.ToString();
+        
+        if (shield > 0)
+        {
+            shield += shieldAmount;
+            healthText.text = health.ToString();
+            shieldText.text = shield.ToString();
+            
+        } else  
+        {
+            shield = 0;
+            health += shieldAmount;
+            healthText.text = health.ToString();
+            shieldText.text = shield.ToString();
+        }
     }
 
     #region INTERFACE
