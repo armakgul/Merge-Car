@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {    
@@ -10,10 +11,12 @@ public class LevelManager : MonoBehaviour
     //public event Action OnSectionOneStarted;
     public event Action OnSectionTwoStarted;
     public event Action OnSectionThreeStarted;
+    public event Action OnFreefallDead;
     
 
-    #region Singleton
-    public static LevelManager Instance { get; private set; }
+    #region Singleton 
+
+    public static LevelManager Instance;
 
     private void Awake()
     {
@@ -83,6 +86,7 @@ public class LevelManager : MonoBehaviour
 
             case GameStates.UI:
             currentState = GameStates.UI;
+            OnFreefallDead();
             break;
 
         }
@@ -120,6 +124,7 @@ public class LevelManager : MonoBehaviour
     private void OnEnable() {
         
         OnSectionThreeStarted += SetRampActive;
+        
     }
 
 

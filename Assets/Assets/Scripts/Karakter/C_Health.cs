@@ -44,16 +44,14 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
         if ((shield - damageAmount) > 0)
         {
             shield -= damageAmount;
-            healthText.text = health.ToString();
-            shieldText.text = shield.ToString();
+            UpdateUI();
             
         } else 
         {
             float restDamage = MathF.Abs(shield - damageAmount);
             shield = 0;
             health -= restDamage;
-            healthText.text = health.ToString();
-            shieldText.text = shield.ToString();
+            UpdateUI();
         }
         
         
@@ -66,7 +64,7 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
             // bir veya iki ise oyun biter
             // üç ise obslar kapanır ve devam eder
             health = 0;
-            healthText.text = health.ToString();
+            UpdateUI();
         } 
 
     }
@@ -74,23 +72,22 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
     // WHAT HAPPENS IF GETS CURED
     public void GetCured( float healthAmount) {
         health += healthAmount;
-        healthText.text = health.ToString();
+        UpdateUI();
     }
 
     public void GetShield (float shieldAmount) {
         
-        if (shield > 0)
+        if ((shield + shieldAmount) > 0)
         {
             shield += shieldAmount;
-            healthText.text = health.ToString();
-            shieldText.text = shield.ToString();
+            UpdateUI();
             
-        } else  
+        } else 
         {
+            float restDamage = MathF.Abs(shield + shieldAmount);
             shield = 0;
-            health += shieldAmount;
-            healthText.text = health.ToString();
-            shieldText.text = shield.ToString();
+            health -= restDamage;
+            UpdateUI();
         }
     }
 
@@ -109,5 +106,10 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
     }
 
     #endregion
+    
+    public void UpdateUI() {
+        healthText.text = health.ToString();
+        shieldText.text = shield.ToString();
+    }
 
 }

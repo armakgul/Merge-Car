@@ -7,6 +7,7 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
     // bu script sadece karaktere sabit hız hareket verecek
     // physic olmayacak
 
+    
 
     // pos aldığı kamera
     [Header ("MOVEMENT ISSUES")]
@@ -86,6 +87,10 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
         {
             Movement3();
         }
+        if (LevelManager.Instance.GetState() == LevelManager.GameStates.UI) 
+        {
+            Movement4();
+        }
         
     }
 
@@ -100,6 +105,12 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
         rb.isKinematic = false;
         rb.useGravity = true;
         rb.velocity = new Vector3(rb.velocity.x,  rb.velocity.y,  p_ForwardSpeed);
+    }
+    public void Movement4 () {
+        rb.isKinematic = true;
+        rb.useGravity = false;
+        rb.velocity = Vector3.zero;
+        return;
     }
 
     public void MousePosition() {
