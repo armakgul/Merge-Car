@@ -104,7 +104,7 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
     public void Movement3() {
         rb.isKinematic = false;
         rb.useGravity = true;
-        rb.velocity = new Vector3(rb.velocity.x,  rb.velocity.y,  p_ForwardSpeed);
+        rb.velocity = new Vector3(rb.velocity.x,  rb.velocity.y,  speed*weight / 75);
     }
     public void Movement4 () {
         rb.isKinematic = true;

@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public GameStates currentState;
 
     //public event Action OnSectionOneStarted;
+    
     public event Action OnSectionTwoStarted;
     public event Action OnSectionThreeStarted;
     public event Action OnFreefallDead;
