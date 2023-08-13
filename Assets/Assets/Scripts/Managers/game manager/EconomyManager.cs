@@ -6,15 +6,18 @@ using UnityEngine;
 public class EconomyManager : MonoBehaviour
 {
 
-    private int money = 100;
+    public delegate void MoneyChangedDelegate(int newAmount);
+    public event MoneyChangedDelegate OnCurrentMoneyChanged;
+    public event MoneyChangedDelegate OnTotalMoneyChanged;
 
-    public delegate void OnMoneyChanged(int money);
-    public static event OnMoneyChanged onMoneyChanged;
-    
+    private const string CURRENT_MONEY_KEY = "CurrentMoney";
+    private const string TOTAL_MONEY_KEY = "TotalMoney";
 
-    // float moneyIncrement = 0;
+    private int currentMoney = 100;
+    private int totalMoney;
+
     
-    /*
+    
     #region Singleton
     public static EconomyManager Instance { get; private set; }
 
@@ -29,29 +32,78 @@ public class EconomyManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        LoadMoney();
+        OnCurrentMoneyChanged?.Invoke(currentMoney);
+        OnTotalMoneyChanged?.Invoke(totalMoney);
     }
     #endregion
-    */
+    
+    public int CurrentMoney
+    {
+        get { return currentMoney; }
+        set
+        {
+            currentMoney = value;
+            OnCurrentMoneyChanged?.Invoke(currentMoney);
+
+            SaveMoney();
+        }
+    }
+
+    public int TotalMoney
+    {
+        get { return totalMoney; }
+        set
+        {
+            totalMoney = value;
+            OnTotalMoneyChanged?.Invoke(totalMoney);
+
+            SaveMoney();
+        }
+    }
+
+    public void EarnMoney(int amount)
+    {
+        CurrentMoney += amount;
+        TotalMoney += amount;        
+    }
+
+    public bool SpendMoney(int amount)
+    {
+        if (currentMoney >= amount)
+        {
+            CurrentMoney -= amount;
+            return true; // Purchase successful
+        }
+        return false; // Not enough money
+    }
+
+    private void SaveMoney()
+    {
+        PlayerPrefs.SetInt(CURRENT_MONEY_KEY, currentMoney);
+        PlayerPrefs.SetInt(TOTAL_MONEY_KEY, totalMoney);
+        PlayerPrefs.Save();
+    }
+    private void LoadMoney()
+    {
+        if (PlayerPrefs.HasKey(CURRENT_MONEY_KEY))
+        {
+            currentMoney = PlayerPrefs.GetInt(CURRENT_MONEY_KEY);
+        }
+        else 
+        currentMoney = 100;
+
+        if (PlayerPrefs.HasKey(TOTAL_MONEY_KEY))
+        {
+            totalMoney = PlayerPrefs.GetInt(TOTAL_MONEY_KEY);
+        }
+        else totalMoney = 100;
+    }
+
 
     public void Start() {
-        money = PlayerPrefs.GetInt("Money", 100);
-       
-        onMoneyChanged?.Invoke(money);
+        LoadMoney();
     }
-
-    public float GetMoney() {
-        return money;
-    }
-    
-
-    public void SetMoney (int amount) {
-        money += amount;
-  
-        PlayerPrefs.SetInt("Money", money);
-        PlayerPrefs.Save();
-
-        onMoneyChanged?.Invoke(money);
-    }
-
 
 }

@@ -91,6 +91,17 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
         }
     }
 
+    public void HealthUpgrade(int amount) {
+        health += amount;
+        UpdateUI();
+    }
+
+    public void ShieldUpgrade(int amount) {
+        shield += amount;
+        UpdateUI();
+    }
+    
+
     #region INTERFACE
         
     public void Cure(float healthAmountfromCurer) {

@@ -321,9 +321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6612c203ff93cc74a9c77f7ba84c54e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyAmount: 10
+  moneyAmount: 400
   damageAmount: 50
-  gameManager: {fileID: 0}
+  economyManager: {fileID: 0}
 --- !u!1 &4516217677857479908
 GameObject:
   m_ObjectHideFlags: 0

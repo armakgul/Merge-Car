@@ -8,10 +8,10 @@ public class MoneyGiver : MonoBehaviour
 
     public float damageAmount;
 
-    public GameObject gameManager;
+    public GameObject economyManager;
 
     private void Start() {
-        gameManager = GameObject.FindGameObjectWithTag("EconomyManager");
+        economyManager = GameObject.FindGameObjectWithTag("EconomyManager");
     }
 
     private  void OnTriggerEnter(Collider other) {
@@ -19,9 +19,9 @@ public class MoneyGiver : MonoBehaviour
         if (other.CompareTag("Player")) 
         { 
 
-            if (gameManager != null)
+            if (economyManager != null)
             {
-                gameManager.GetComponent<EconomyManager>().SetMoney(moneyAmount);
+                economyManager.GetComponent<EconomyManager>().EarnMoney(moneyAmount);
             } 
            
             IDamagable damagable = other.GetComponent<IDamagable>();
