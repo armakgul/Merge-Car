@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class HealthGiver : MonoBehaviour
 {
-    public float cureAmountTange;
+    public float cureAmountRange;
     private float cureAmount;
     private float cureAmountCorrected; 
+
+    //public Obstacle obstacle;
 
     [Header ("Material")]
     private Material healthMaterial;
@@ -34,7 +36,7 @@ public class HealthGiver : MonoBehaviour
 
         healthMaterial = gameObject.GetComponent<Renderer>().material;
         
-        cureAmount = Random.Range(-cureAmountTange, cureAmountTange);
+        cureAmount = Random.Range(-cureAmountRange-10, cureAmountRange*2f);
         
         cureAmountCorrected = Mathf.Ceil(cureAmount);
 

@@ -11,11 +11,11 @@ public class O_Canvas : MonoBehaviour
     [SerializeField] public TMP_Text valueText, description;
     [SerializeField] public Sprite sprite;
     
-    enum ShieldOrHealth {healthGiver, shieldGiver, speedGiver, weightReducer, moneyGiver};
+    enum ObstacleType {healthGiver, shieldGiver, speedGiver, weightReducer, moneyGiver, speedGiverFirst, weightReducerFirst, moneyGiverFirst};
 
     [Header("OBS TYPE")]
     
-    [SerializeField] ShieldOrHealth shieldorhealth;
+    [SerializeField] ObstacleType obstacleType;
 
     private float value;
 
@@ -31,31 +31,46 @@ public class O_Canvas : MonoBehaviour
 
     public void SwitchBetweenObs () {
 
-        switch (shieldorhealth)
+        switch (obstacleType)
         {
-            case ShieldOrHealth.shieldGiver:
+            case ObstacleType.shieldGiver:
             description.text = "SHIELD";
             value = GetComponent<ShieldGiver>().GetShieldAmount();
             break;
 
-            case ShieldOrHealth.healthGiver:
+            case ObstacleType.healthGiver:
             description.text = "HEALTH";
             value = GetComponent<HealthGiver>().GetCureAmount();
             break;
 
-            case ShieldOrHealth.speedGiver:
+            case ObstacleType.speedGiver:
             //description.text = "HEALTH";
             value = GetComponent<SpeedGiver>().damageAmount;
             break;
 
-            case ShieldOrHealth.weightReducer:
+            case ObstacleType.weightReducer:
             //description.text = "HEALTH";
             value = GetComponent<WeightReducer>().damageAmount;
             break;
 
-            case ShieldOrHealth.moneyGiver:
+            case ObstacleType.moneyGiver:
             //description.text = "HEALTH";
             value = GetComponent<MoneyGiver>().damageAmount;
+            break;
+
+            case ObstacleType.speedGiverFirst:
+            //description.text = "HEALTH";
+            value = GetComponent<SpeedGiverFirst>().speedAmount;
+            break;
+
+            case ObstacleType.weightReducerFirst:
+            //description.text = "HEALTH";
+            value = GetComponent<WeightReducerFirst>().weightAmount;
+            break;
+
+            case ObstacleType.moneyGiverFirst:
+            //description.text = "HEALTH";
+            value = GetComponent<MoneyGiverFirst>().moneyAmount;
             break;
 
         }

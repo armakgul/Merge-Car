@@ -7,9 +7,10 @@ using System;
 public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 {
     [Header ("CONSTRUCTORS")]
-    [SerializeField] public float health;
- 
-    [SerializeField] public float shield;
+    
+    public Car car;
+    float health;
+    float shield;
 
     [Header ("TEXTS")]
     public TMP_Text healthText;
@@ -17,11 +18,15 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 
     [Header ("SCRIPTS")]
     public LevelManager levelManager;
+    
 
 
     //public event Action onHealthIsZero;
 
     private void Start() {
+
+        health = car.health;
+        shield = car.shield;
         
         healthText = GameObject.Find("Health").GetComponent<TMP_Text>();
         healthText.text = health.ToString();

@@ -8,9 +8,13 @@ public class ObsFactory : MonoBehaviour
     {
         HealthGiver,
         ShieldGiver,
+        WeightReducerFirst,
+        SpeedGiverFirst,
+        MoneyGiverFirst,
         SpeedGiver,
         MoneyGiver,
         WeightReducer
+        
     }
 
     public ObstacleType[] obstacleTypes = (ObstacleType[]) System.Enum.GetValues(typeof(ObstacleType));
@@ -20,6 +24,9 @@ public class ObsFactory : MonoBehaviour
     [SerializeField] private GameObject moneyGiverPrefab;
     [SerializeField] private GameObject weightReducerPrefab;
     [SerializeField] private GameObject speedGiverPrefab;
+    [SerializeField] private GameObject moneyGiverFirstPrefab;
+    [SerializeField] private GameObject weightReducerFirstPrefab;
+    [SerializeField] private GameObject speedGiverFirstPrefab;
 
     public GameObject CreateObstacle(ObstacleType type, Vector3 position)
     {
@@ -41,6 +48,15 @@ public class ObsFactory : MonoBehaviour
                 break;
             case ObstacleType.MoneyGiver:
                 obstacleToSpawn = Instantiate(moneyGiverPrefab, position, Quaternion.Euler(270, 0, 0));
+                break;
+            case ObstacleType.SpeedGiverFirst:
+                obstacleToSpawn = Instantiate(speedGiverFirstPrefab, position, Quaternion.Euler(270, 0, 0));
+                break;
+            case ObstacleType.WeightReducerFirst:
+                obstacleToSpawn = Instantiate(weightReducerFirstPrefab, position, Quaternion.Euler(270, 0, 0));
+                break;
+            case ObstacleType.MoneyGiverFirst:
+                obstacleToSpawn = Instantiate(moneyGiverFirstPrefab, position, Quaternion.Euler(270, 0, 0));
                 break;
 
             default:

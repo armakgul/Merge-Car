@@ -15,7 +15,7 @@ public class CameraMovement : MonoBehaviour
         objectToFollow = GameObject.FindGameObjectWithTag("Player");  
     }
 
-    void Update() {
+    void LateUpdate() {
         MoveCamera(cameraOffset);
     }
     

@@ -279,7 +279,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   description: {fileID: 0}
   sprite: {fileID: 0}
-  shieldorhealth: 2
+  obstacleType: 2
 --- !u!1 &1033177723939788258
 GameObject:
   m_ObjectHideFlags: 0

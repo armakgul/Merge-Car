@@ -26,7 +26,7 @@ public class ObsSpawner : MonoBehaviour
         {
 
             
-            ObsFactory.ObstacleType type = (ObsFactory.ObstacleType)Random.Range(0, 2);
+            ObsFactory.ObstacleType type = (ObsFactory.ObstacleType)Random.Range(0, 5);
             // Randomly set spawn distance to either 10, 20 or 30
             spawnDistance = Random.Range(1,2)*distanceBetweenObstacles;
             // Randomly select a lane (-2.5 or 2.5)
@@ -37,6 +37,8 @@ public class ObsSpawner : MonoBehaviour
             Vector3 position = new Vector3(lanePosition, 2.5f, i * spawnDistance - 50);  // Adjust to set obstacle positions as needed
             // Create the obstacle
             obstacleFactory.CreateObstacle(type, position);
+
+            
 
              
             /*

@@ -114,7 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 10
 --- !u!114 &7967036713996042276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e74a300fd06f6428c1e5ce6fd2a885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldAmountRange: 5
+  shieldAmountRange: 10
   colorForPos: {r: 0.2901961, g: 0.94509804, b: 0.92941177, a: 0.44705883}
   colorForNeg: {r: 1, g: 0, b: 0, a: 0.50980395}
 --- !u!114 &7967036713996042277
@@ -145,7 +144,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   description: {fileID: 0}
   sprite: {fileID: 0}
-  shieldorhealth: 1
+  obstacleType: 1
 --- !u!1 &6743584729932651484
 GameObject:
   m_ObjectHideFlags: 0

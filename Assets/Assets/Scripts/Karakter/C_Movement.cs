@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
+using System;
 
 public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
 {
     // bu script sadece karaktere sabit hız hareket verecek
     // physic olmayacak
 
-    
+    public Car car;
+    private Action CurrentMovementMethod;
 
     // pos aldığı kamera
     [Header ("MOVEMENT ISSUES")]
     [SerializeField] public Camera orthoCamera;
     [SerializeField] public float cameraCorrectionMultiplier;
     public GameObject player;
-    public Vector3 p_position;
-    public float p_ForwardSpeed = 1;
 
 
     //mouse drag distance
@@ -25,32 +27,51 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
 
     public Rigidbody rb;
 
+    float speed;
+    float weight;
 
-    [Header ("OBS ISSUES")]
-     public float speed = 25;
-     public float weight = 50;
-
+    public float GetSpeed
+    {
+        get { return speed; }
+    }
+    public float GetWeight
+    {
+        get { return weight; }
+    }
 
     public void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody>();
+
+        SetCarVariables();
     }
 
-    private void Update() 
+    private void OnEnable()
     {
-           
-        CheckStates();
-   
+        LevelManager.OnGameStateChanged += HandleGameStateChanged;
+    }
+
+    private void OnDisable()
+    {
+        LevelManager.OnGameStateChanged -= HandleGameStateChanged;
+    }
+
+    void SetCarVariables() {
+        speed = car.speed;
+        weight = car.weight;
+    }
+
+    private void Update()
+    {
+        CurrentMovementMethod?.Invoke();
     }
 
 
-    public void GetSpeed (float speedAmount) {
+    public void MakeSpeedUp (float speedAmount) {
         speed += speedAmount;
-        //p_ForwardSpeed = speed;
-        //shieldText.text = shield.ToString();
     }
 
-    public void GetWeight (float weightAmount) {
+    public void MakeWeightdown (float weightAmount) {
         weight -= weightAmount;
     }
 
@@ -58,40 +79,40 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
 
     #region INTERFACE
         
-    public void Speed(float speedAmount) {
-        GetSpeed(speedAmount);
+    public void SpeedUp(float speedAmount) {
+        MakeSpeedUp(speedAmount);
     }
 
-    public void Weight (float weightAmount) {
-        GetWeight(weightAmount);
+    public void WeightDown (float weightAmount) {
+        MakeWeightdown(weightAmount);
     }
-
-
 
     #endregion
-    //Mouse pozisyonu x ekseninde alınıp karaktere atanıyor
+   
 
 
-    public void CheckStates() {
 
-        if (LevelManager.Instance.GetState() == LevelManager.GameStates.start)
+    private void HandleGameStateChanged(LevelManager.GameStates newState)
+    {
+        switch (newState)
         {
-            Movement1();
+            case LevelManager.GameStates.start:
+                CurrentMovementMethod = Movement1;
+                break;
+            case LevelManager.GameStates.section1:
+            case LevelManager.GameStates.section2:
+                CurrentMovementMethod = Movement2;
+                break;
+            case LevelManager.GameStates.section3:
+                CurrentMovementMethod = Movement3;
+                break;
+            case LevelManager.GameStates.UI:
+                CurrentMovementMethod = Movement4;
+                break;
+            default:
+                CurrentMovementMethod = null; // Or assign a default movement method.
+                break;
         }
-
-        if (LevelManager.Instance.GetState() == LevelManager.GameStates.section1 || LevelManager.Instance.GetState() == LevelManager.GameStates.section2)
-        {
-            Movement2();
-        }
-        if (LevelManager.Instance.GetState() == LevelManager.GameStates.section3) 
-        {
-            Movement3();
-        }
-        if (LevelManager.Instance.GetState() == LevelManager.GameStates.UI) 
-        {
-            Movement4();
-        }
-        
     }
 
     public void Movement1() {
@@ -99,12 +120,12 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
     } 
     public void Movement2() {
         MousePosition();
-        MoveCharacter(mouseDistance.x, p_ForwardSpeed);
+        MoveCharacter(mouseDistance.x, speed/weight*speed*2);
     }
     public void Movement3() {
         rb.isKinematic = false;
         rb.useGravity = true;
-        rb.velocity = new Vector3(rb.velocity.x,  rb.velocity.y,  speed*weight / 75);
+        rb.velocity = new Vector3(rb.velocity.x,  rb.velocity.y,  speed/weight*speed*2);
     }
     public void Movement4 () {
         rb.isKinematic = true;

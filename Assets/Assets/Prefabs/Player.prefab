@@ -388,7 +388,6 @@ GameObject:
   - component: {fileID: 8791045466331989250}
   - component: {fileID: 3086131321933574808}
   - component: {fileID: 2069257136}
-  - component: {fileID: 712564889435514322}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -474,8 +473,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6912092, y: 1, z: 4.251831}
-  m_Center: {x: -0.1253627, y: 0, z: 0.1733551}
+  m_Size: {x: 1.6912092, y: 1, z: 0.90221405}
+  m_Center: {x: -0.1253627, y: 0, z: 1.7461739}
 --- !u!54 &2069257137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -504,14 +503,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aea65096b56a0642916ad2f97bd57c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  car: {fileID: 11400000, guid: f3af55b07905ea94f9fd84c0be70a743, type: 2}
   orthoCamera: {fileID: 0}
   cameraCorrectionMultiplier: 1
   player: {fileID: 0}
-  p_position: {x: 0, y: 0, z: 0}
-  p_ForwardSpeed: 75
   rb: {fileID: 0}
-  speed: 100
-  weight: 50
 --- !u!114 &3086131321933574808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,23 +533,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7515c279a567fe444bbc8788fc472ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  shield: 0
+  car: {fileID: 11400000, guid: f3af55b07905ea94f9fd84c0be70a743, type: 2}
   healthText: {fileID: 0}
   shieldText: {fileID: 0}
   levelManager: {fileID: 0}
---- !u!114 &712564889435514322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8791045466331989277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea3fa26e60c819469f604f72a74606c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7299125727571659386
 PrefabInstance:
   m_ObjectHideFlags: 0

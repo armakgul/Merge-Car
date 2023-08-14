@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeightReducer : MonoBehaviour
+public class WeightReducerFirst : MonoBehaviour
 {
     public float weightAmount;
 

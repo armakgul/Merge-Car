@@ -15,7 +15,7 @@ public class SpeedGiver : MonoBehaviour
             ISpeedable speedable = other.GetComponent<ISpeedable>();
             if (speedable != null)
             {
-                speedable.Speed(speedAmount);
+                speedable.SpeedUp(speedAmount);
             }
 
            
@@ -23,7 +23,6 @@ public class SpeedGiver : MonoBehaviour
             if (damagable != null)
             {
                 damagable.Damage(damageAmount);
-                Debug.Log("ASDFASDFA");
             }
         }
             

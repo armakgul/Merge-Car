@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IWeightable 
 {
-    void Weight (float weight);
+    void WeightDown (float weight);
 }

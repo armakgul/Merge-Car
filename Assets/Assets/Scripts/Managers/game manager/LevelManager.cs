@@ -18,6 +18,9 @@ public class LevelManager : MonoBehaviour
     public event Action OnFreefallDead;
     public event Action OnSectionOneStarted;
     
+    public delegate void GameStateChanged(GameStates newState);
+    public static event GameStateChanged OnGameStateChanged;
+    
 
     #region Singleton 
 
@@ -53,7 +56,7 @@ public class LevelManager : MonoBehaviour
         
         SetState(GameStates.start);
 
-        ramp.SetActive(false);
+        ramp.SetActive(true);
     }
 
     private void Update() 
@@ -69,30 +72,36 @@ public class LevelManager : MonoBehaviour
             case GameStates.start:
             currentState = GameStates.start;
             OnStart();
+            OnGameStateChanged?.Invoke(currentState);
             break;
 
             case GameStates.section1:
             currentState = GameStates.section1;
             OnSectionOneStarted();
+            OnGameStateChanged?.Invoke(currentState);
             break;
 
             case GameStates.section2:
             currentState = GameStates.section2;
             OnSectionTwoStarted();
+            OnGameStateChanged?.Invoke(currentState);
             break;
             
             case GameStates.section3:
             currentState = GameStates.section3;
             OnSectionThreeStarted();
+            OnGameStateChanged?.Invoke(currentState);
             break;
 
             case GameStates.freefall:
             currentState = GameStates.freefall;
+            OnGameStateChanged?.Invoke(currentState);
             break;
 
             case GameStates.UI:
             currentState = GameStates.UI;
             OnFreefallDead();
+            OnGameStateChanged?.Invoke(currentState);
             break;
 
         }
@@ -152,11 +161,9 @@ public class LevelManager : MonoBehaviour
         
     }
 
-
     private void OnDisable() {
         OnSectionThreeStarted -= SetRampActive;
     }
-
 
     public void SetRampActive()
     {

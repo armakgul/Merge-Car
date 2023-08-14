@@ -226,9 +226,9 @@ GameObject:
   - component: {fileID: 4172840523963608915}
   - component: {fileID: 4172840523963608902}
   - component: {fileID: 4172840523963608901}
-  - component: {fileID: 4172840523963607217}
+  - component: {fileID: 3527427347492899440}
   m_Layer: 0
-  m_Name: WeightReducer
+  m_Name: WeightReducerFirst
   m_TagString: Obs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ Transform:
   m_GameObject: {fileID: 4172840523963608904}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 3.29, y: 1.5, z: 213.7}
-  m_LocalScale: {x: 0.25, y: 0.5555556, z: 0.19444445}
+  m_LocalScale: {x: 0.45, y: 1, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4172840525405484927}
@@ -341,8 +341,8 @@ MonoBehaviour:
   valueText: {fileID: 0}
   description: {fileID: 0}
   sprite: {fileID: 0}
-  obstacleType: 3
---- !u!114 &4172840523963607217
+  obstacleType: 6
+--- !u!114 &3527427347492899440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,11 +351,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4172840523963608904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1883a856531ae4e48ac2c0607230c93f, type: 3}
+  m_Script: {fileID: 11500000, guid: dba1153e96b08b44482f1661e510fd2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weightAmount: 1
-  damageAmount: 50
+  weightAmount: 0.5
+  damageAmount: 0
 --- !u!1 &4172840524086695986
 GameObject:
   m_ObjectHideFlags: 0

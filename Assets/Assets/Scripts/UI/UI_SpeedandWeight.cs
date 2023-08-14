@@ -44,8 +44,8 @@ public class UI_SpeedandWeight : MonoBehaviour
 
     public void SetValues() {
         
-        speedText.text = player.GetComponent<C_Movement>().speed.ToString();
-        weightText.text = player.GetComponent<C_Movement>().weight.ToString();
+        speedText.text = player.GetComponent<C_Movement>().GetSpeed.ToString();
+        weightText.text = player.GetComponent<C_Movement>().GetWeight.ToString();
        //moneyText.text = economyManager.GetComponent<EconomyManager>().CurrentMoney().ToString();
     }
 

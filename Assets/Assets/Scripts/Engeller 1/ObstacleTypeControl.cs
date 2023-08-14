@@ -2,20 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeightReducer : MonoBehaviour
+public class ObstacleTypeControl : MonoBehaviour
 {
-    public float weightAmount;
+    
+    public Obstacle obstacle;
+    
+    public float speedAmount;
 
     public float damageAmount;
+
+    private void Start() {
+        
+    }
 
     private  void OnTriggerEnter(Collider other) {
         
         if (other.CompareTag("Player")) 
         { 
-            IWeightable weightable = other.GetComponent<IWeightable>();
-            if (weightable != null)
+            ISpeedable speedable = other.GetComponent<ISpeedable>();
+            if (speedable != null)
             {
-                weightable.WeightDown(weightAmount);
+                speedable.SpeedUp(speedAmount);
             }
 
            
@@ -26,5 +33,8 @@ public class WeightReducer : MonoBehaviour
             }
         }
             
-        } 
+        }
+
+
+     
 }

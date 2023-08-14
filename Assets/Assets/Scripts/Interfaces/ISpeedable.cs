@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ISpeedable 
 {
-    void Speed (float speed);
+    void SpeedUp (float speed);
 }

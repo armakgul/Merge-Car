@@ -90,6 +90,7 @@ public class EconomyManager : MonoBehaviour
         if (PlayerPrefs.HasKey(CURRENT_MONEY_KEY))
         {
             currentMoney = PlayerPrefs.GetInt(CURRENT_MONEY_KEY);
+            
         }
         else 
         currentMoney = 100;
@@ -104,6 +105,8 @@ public class EconomyManager : MonoBehaviour
 
     public void Start() {
         LoadMoney();
+        //PlayerPrefs.SetInt(CURRENT_MONEY_KEY, 100);
+        //PlayerPrefs.SetInt(TOTAL_MONEY_KEY, 100);
     }
 
 }

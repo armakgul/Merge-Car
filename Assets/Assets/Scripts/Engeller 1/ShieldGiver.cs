@@ -34,7 +34,7 @@ public class ShieldGiver : MonoBehaviour
         
         shieldMaterial = gameObject.GetComponent<Renderer>().material;
 
-        shieldAmount = Random.Range(-shieldAmountRange, shieldAmountRange);
+        shieldAmount = Random.Range(-shieldAmountRange*-10, shieldAmountRange*2f);
 
         shieldAmountCorrected = Mathf.Ceil(shieldAmount);
         

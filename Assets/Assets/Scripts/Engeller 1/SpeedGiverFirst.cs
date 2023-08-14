@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeightReducer : MonoBehaviour
+public class SpeedGiverFirst : MonoBehaviour
 {
-    public float weightAmount;
+    public float speedAmount;
 
     public float damageAmount;
 
@@ -12,10 +12,10 @@ public class WeightReducer : MonoBehaviour
         
         if (other.CompareTag("Player")) 
         { 
-            IWeightable weightable = other.GetComponent<IWeightable>();
-            if (weightable != null)
+            ISpeedable speedable = other.GetComponent<ISpeedable>();
+            if (speedable != null)
             {
-                weightable.WeightDown(weightAmount);
+                speedable.SpeedUp(speedAmount);
             }
 
            
@@ -27,4 +27,5 @@ public class WeightReducer : MonoBehaviour
         }
             
         } 
+    
 }

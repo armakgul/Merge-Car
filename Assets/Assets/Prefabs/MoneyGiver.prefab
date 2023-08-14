@@ -308,7 +308,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   description: {fileID: 0}
   sprite: {fileID: 0}
-  shieldorhealth: 4
+  obstacleType: 4
 --- !u!114 &4516217677215048218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6612c203ff93cc74a9c77f7ba84c54e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyAmount: 400
+  moneyAmount: 25
   damageAmount: 50
   economyManager: {fileID: 0}
 --- !u!1 &4516217677857479908
