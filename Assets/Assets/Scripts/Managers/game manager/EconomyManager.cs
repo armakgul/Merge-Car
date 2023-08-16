@@ -18,6 +18,7 @@ public class EconomyManager : MonoBehaviour
 
     private int sessionMoney;
 
+    private int aa;
     
     
     #region Singleton
