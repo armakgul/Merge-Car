@@ -20,6 +20,7 @@ public class EconomyManager : MonoBehaviour
 
     private int aa;
     private int bb;
+    private int cc;
     
     
     #region Singleton
