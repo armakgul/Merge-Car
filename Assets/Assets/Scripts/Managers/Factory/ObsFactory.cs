@@ -11,6 +11,7 @@ public class ObsFactory : MonoBehaviour
         WeightReducerFirst,
         SpeedGiverFirst,
         MoneyGiverFirst,
+        SpeedGiverRoad,
         SpeedGiver,
         MoneyGiver,
         WeightReducer
@@ -24,6 +25,7 @@ public class ObsFactory : MonoBehaviour
     [SerializeField] private GameObject moneyGiverPrefab;
     [SerializeField] private GameObject weightReducerPrefab;
     [SerializeField] private GameObject speedGiverPrefab;
+    [SerializeField] private GameObject speedGiverRoadPrefab;   
     [SerializeField] private GameObject moneyGiverFirstPrefab;
     [SerializeField] private GameObject weightReducerFirstPrefab;
     [SerializeField] private GameObject speedGiverFirstPrefab;
@@ -57,6 +59,9 @@ public class ObsFactory : MonoBehaviour
                 break;
             case ObstacleType.MoneyGiverFirst:
                 obstacleToSpawn = Instantiate(moneyGiverFirstPrefab, position, Quaternion.Euler(270, 0, 0));
+                break;
+            case ObstacleType.SpeedGiverRoad:
+                obstacleToSpawn = Instantiate(speedGiverRoadPrefab, position, Quaternion.Euler(270, 0, 0));
                 break;
 
             default:
