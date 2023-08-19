@@ -8,21 +8,13 @@ public class MoneyGiver : MonoBehaviour
 
     public float damageAmount;
 
-    public GameObject economyManager;
-
-    private void Start() {
-        economyManager = GameObject.FindGameObjectWithTag("EconomyManager");
-    }
 
     private  void OnTriggerEnter(Collider other) {
         
         if (other.CompareTag("Player")) 
         { 
 
-            if (economyManager != null)
-            {
-                economyManager.GetComponent<EconomyManager>().EarnMoney(moneyAmount);
-            } 
+            SessionEconomy.Instance.EarnSessionMoney(moneyAmount);
            
             IDamagable damagable = other.GetComponent<IDamagable>();
             if (damagable != null)

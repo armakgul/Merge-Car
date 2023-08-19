@@ -16,11 +16,7 @@ public class EconomyManager : MonoBehaviour
     private int currentMoney = 100;
     private int totalMoney;
 
-    private int sessionMoney;
 
-    private int aa;
-    private int bb;
-    private int cc;
     
     
     #region Singleton
@@ -112,25 +108,7 @@ public class EconomyManager : MonoBehaviour
         LoadMoney();
         //PlayerPrefs.SetInt(CURRENT_MONEY_KEY, 100);
         //PlayerPrefs.SetInt(TOTAL_MONEY_KEY, 100);
-        ResetSessionMoney();
-    }
-
-    
-    private int sessionMultiplier = 1;  // Default multiplier
-
-    public int SessionMoney 
-    {
-        get { return sessionMoney; }
-        set
-        {
-            sessionMoney = value;
-            // Update UI or any other logic needed to reflect session money
-        }
-    }
-
-    public void ResetSessionMoney()
-    {
-        SessionMoney = 0;
-    }
+        
+    }   
 
 }

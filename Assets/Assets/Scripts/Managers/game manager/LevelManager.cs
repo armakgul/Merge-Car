@@ -151,7 +151,7 @@ public class LevelManager : MonoBehaviour
 
     private void StartGame() {
         SetState(GameStates.section1);
-        Debug.Log("section 1 started");
+        //Debug.Log("section 1 started");
 
     }
 

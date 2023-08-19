@@ -8,20 +8,19 @@ public class UI_SpeedandWeight : MonoBehaviour
     public TMP_Text speedText;
     public TMP_Text weightText;
     public TMP_Text moneyText;
+    public TMP_Text sessionMoneytext;
 
     private GameObject player;
-    private GameObject economyManager;
 
 
     private void Start() {
         
         player = GameObject.FindGameObjectWithTag("Player");
-        economyManager = GameObject.FindGameObjectWithTag("EconomyManager");
 
         speedText = transform.Find("SpeedandWeight/Speedvalue").GetComponent<TMP_Text>();
         weightText = transform.Find("SpeedandWeight/Weightvalue").GetComponent<TMP_Text>();
         moneyText = transform.Find("SpeedandWeight/Moneyvalue").GetComponent<TMP_Text>();
-
+        sessionMoneytext = transform.Find("SpeedandWeight/SessionMoneyValue").GetComponent<TMP_Text>();
 
 
         EconomyManager.Instance.OnCurrentMoneyChanged += UpdateCurrentMoneyUI;
@@ -46,7 +45,8 @@ public class UI_SpeedandWeight : MonoBehaviour
         
         speedText.text = player.GetComponent<C_Movement>().GetSpeed.ToString();
         weightText.text = player.GetComponent<C_Movement>().GetWeight.ToString();
-       //moneyText.text = economyManager.GetComponent<EconomyManager>().CurrentMoney().ToString();
+        sessionMoneytext.text = SessionEconomy.Instance.SessionMoney.ToString();       
+       
     }
 
     private void UpdateCurrentMoneyUI(int newAmount)
