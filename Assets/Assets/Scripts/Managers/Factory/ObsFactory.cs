@@ -12,6 +12,10 @@ public class ObsFactory : MonoBehaviour
         SpeedGiverFirst,
         MoneyGiverFirst,
         SpeedGiverRoad,
+        MoneyGiverRoad,
+        WeightReducerRoad,
+        HealthGiverRoad,
+        ShieldGiverRoad,
         SpeedGiver,
         MoneyGiver,
         WeightReducer
@@ -25,7 +29,11 @@ public class ObsFactory : MonoBehaviour
     [SerializeField] private GameObject moneyGiverPrefab;
     [SerializeField] private GameObject weightReducerPrefab;
     [SerializeField] private GameObject speedGiverPrefab;
-    [SerializeField] private GameObject speedGiverRoadPrefab;   
+    [SerializeField] private GameObject speedGiverRoadPrefab;
+    [SerializeField] private GameObject moneyGiverRoadPrefab;
+    [SerializeField] private GameObject weightReducerRoadPrefab;
+    [SerializeField] private GameObject healthGiverRoadPrefab;
+    [SerializeField] private GameObject shieldGiverRoadPrefab;   
     [SerializeField] private GameObject moneyGiverFirstPrefab;
     [SerializeField] private GameObject weightReducerFirstPrefab;
     [SerializeField] private GameObject speedGiverFirstPrefab;
@@ -62,6 +70,18 @@ public class ObsFactory : MonoBehaviour
                 break;
             case ObstacleType.SpeedGiverRoad:
                 obstacleToSpawn = Instantiate(speedGiverRoadPrefab, position, Quaternion.Euler(270, 0, 0));
+                break;
+            case ObstacleType.MoneyGiverRoad:
+                obstacleToSpawn = Instantiate(moneyGiverRoadPrefab, position, Quaternion.Euler(270, 0, 0));
+                break;
+            case ObstacleType.WeightReducerRoad:
+                obstacleToSpawn = Instantiate(weightReducerRoadPrefab, position, Quaternion.Euler(270, 0, 0));
+                break;
+            case ObstacleType.HealthGiverRoad:
+                obstacleToSpawn = Instantiate(healthGiverRoadPrefab, position, Quaternion.Euler(270, 0, 0));
+                break;
+            case ObstacleType.ShieldGiverRoad:
+                obstacleToSpawn = Instantiate(shieldGiverRoadPrefab, position, Quaternion.Euler(270, 0, 0));
                 break;
 
             default:

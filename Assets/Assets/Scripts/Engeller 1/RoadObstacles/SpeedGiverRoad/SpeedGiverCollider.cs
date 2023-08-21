@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpeedGiverCollider : MonoBehaviour
 {   
     private SpeedGiverRoad speedGiverScript;
+    public float deltaAmount;
     
     private void Start() {
         speedGiverScript = transform.parent.GetComponent<SpeedGiverRoad>();
@@ -15,7 +16,7 @@ public class SpeedGiverCollider : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if (other.tag == "Player")
         {
-            speedGiverScript.speedAmount += Time.deltaTime;
+            speedGiverScript.speedAmount += Time.deltaTime*deltaAmount;
         }
     }
 

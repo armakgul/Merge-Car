@@ -38,9 +38,9 @@ public class ObsSpawner2 : MonoBehaviour
         ObsFactory.ObstacleType[] obstacleTypes = (ObsFactory.ObstacleType[])System.Enum.GetValues(typeof(ObsFactory.ObstacleType));
 
         // Now you can access enum values by their index
-        ObsFactory.ObstacleType thirdType = obstacleTypes[6]; // 3rd enum
-        ObsFactory.ObstacleType fourthType = obstacleTypes[7]; // 4th enum
-        ObsFactory.ObstacleType fifthType = obstacleTypes[8]; // 5th enum
+        ObsFactory.ObstacleType thirdType = obstacleTypes[10]; // 3rd enum
+        ObsFactory.ObstacleType fourthType = obstacleTypes[11]; // 4th enum
+        ObsFactory.ObstacleType fifthType = obstacleTypes[12]; // 5th enum
 
 
         for (int i = 0; i < laneCount; i++)

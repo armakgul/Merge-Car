@@ -11,7 +11,7 @@ public class O_Canvas : MonoBehaviour
     [SerializeField] public TMP_Text valueText, description;
     [SerializeField] public Sprite sprite;
     
-    enum ObstacleType {healthGiver, shieldGiver, speedGiver, weightReducer, moneyGiver, speedGiverFirst, weightReducerFirst, moneyGiverFirst, speedGiverRoad};
+    enum ObstacleType {healthGiver, shieldGiver, speedGiver, weightReducer, moneyGiver, speedGiverFirst, weightReducerFirst, moneyGiverFirst};
 
     [Header("OBS TYPE")]
     
@@ -72,13 +72,6 @@ public class O_Canvas : MonoBehaviour
             //description.text = "HEALTH";
             value = GetComponent<MoneyGiverFirst>().moneyAmount;
             break;
-
-            case ObstacleType.speedGiverRoad:
-            //description.text = "HEALTH";
-            value = GetComponent<SpeedGiverRoad>().speedAmount;
-            break;
-
-
 
         }
 
