@@ -23,7 +23,9 @@ public class StoreManager : MonoBehaviour
     }
     public void OnCredit5PurchaseCompeleted()
     {
+
         //activate 40000 credit method here
+
     }
     public void OnCredit6PurchaseCompeleted()
     {

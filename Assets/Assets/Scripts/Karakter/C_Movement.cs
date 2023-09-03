@@ -64,8 +64,7 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
     private void Update()
     {
         CurrentMovementMethod?.Invoke();
-        Debug.Log("xPos: " + player.transform.position.x);
-        Debug.Log("mouseDistance.x: " + mouseDistance.x);
+        
     }
 
 
