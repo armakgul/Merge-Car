@@ -29,6 +29,8 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
 
     float speed;
     float weight;
+    GameObject carModel;
+    GameObject currentCar;
 
     public float GetSpeed
     {
@@ -59,6 +61,9 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
     void SetCarVariables() {
         speed = car.speed;
         weight = car.weight;
+        carModel = car.model;
+        currentCar = Instantiate(carModel, player.transform.position,Quaternion.identity);
+        currentCar.transform.parent = player.transform;
     }
 
     private void Update()
@@ -167,6 +172,14 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
     public void MoveCharacter(float xPos , float speed) {
         
         player.transform.position = new Vector3(Mathf.Clamp(xPos/cameraCorrectionMultiplier, -4.5f, + 4.5f), 0.51f , player.transform.position.z + Time.deltaTime * speed);
+
+        player.transform.eulerAngles = Vector3.Lerp(Vector3.zero, Vector3.up*mouseDistance.x, 3000f*Time.deltaTime);
+
+        if (!trackMouse)
+        {
+            Vector3 pos = player.transform.eulerAngles;
+            player.transform.eulerAngles = Vector3.Lerp(pos, Vector3.zero, 1000f*Time.deltaTime);
+        }
         
     }
 }

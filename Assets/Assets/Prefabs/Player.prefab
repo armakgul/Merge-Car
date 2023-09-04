@@ -388,7 +388,6 @@ GameObject:
   - component: {fileID: 8791045466331989250}
   - component: {fileID: 3086131321933574808}
   - component: {fileID: 2069257136}
-  - component: {fileID: -2519764474314318573}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -504,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aea65096b56a0642916ad2f97bd57c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 11400000, guid: f3af55b07905ea94f9fd84c0be70a743, type: 2}
+  car: {fileID: 11400000, guid: f7dd7d94fa7dd7141a23099b1d6f66e4, type: 2}
   orthoCamera: {fileID: 0}
   cameraCorrectionMultiplier: 1
   player: {fileID: 0}
@@ -538,24 +537,6 @@ MonoBehaviour:
   healthText: {fileID: 0}
   shieldText: {fileID: 0}
   levelManager: {fileID: 0}
---- !u!114 &-2519764474314318573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8791045466331989277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed6f4e7c19dd4f6499fc6f68dccdff55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frontLeftTire: {fileID: 8923722371178416229}
-  frontRightTire: {fileID: 5635941525704111137}
-  rearLeftTire: {fileID: 5166769088526681995}
-  rearRightTire: {fileID: 35428685119819417}
-  rotationSpeed: 15
-  dragSensitivity: 5
 --- !u!1001 &7299125727571659386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -623,6 +604,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: car_low_poly
       objectReference: {fileID: 0}
+    - target: {fileID: 688210710987452227, guid: 86819c3b288f832458f16e72d32ffd0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3273525441720170799, guid: 86819c3b288f832458f16e72d32ffd0b,
         type: 3}
       propertyPath: m_Name
@@ -645,33 +631,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86819c3b288f832458f16e72d32ffd0b, type: 3}
---- !u!4 &35428685119819417 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7293133327106557155, guid: 86819c3b288f832458f16e72d32ffd0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7299125727571659386}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5166769088526681995 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2521937937475096049, guid: 86819c3b288f832458f16e72d32ffd0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7299125727571659386}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5635941525704111137 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3133756402584370779, guid: 86819c3b288f832458f16e72d32ffd0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7299125727571659386}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7461733953173733251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 200079584043398649, guid: 86819c3b288f832458f16e72d32ffd0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7299125727571659386}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8923722371178416229 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2205877723691811359, guid: 86819c3b288f832458f16e72d32ffd0b,
     type: 3}
   m_PrefabInstance: {fileID: 7299125727571659386}
   m_PrefabAsset: {fileID: 0}
