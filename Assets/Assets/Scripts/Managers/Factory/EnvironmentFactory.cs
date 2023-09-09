@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnvironmetGenerator : MonoBehaviour
+public class EnvironmentFactory : MonoBehaviour
 {
     public GameObject[] prefabs;
-
-    
 }
