@@ -988,7 +988,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89671e92d1a5a9d4c862e995920a626b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs: []
+  prefabs:
+  - {fileID: 6933581298254482110, guid: 4c0bfbc6577f7004f8fc2ca8846afc2e, type: 3}
+  - {fileID: 1536737271204798601, guid: 3320269a8a3326b4ea6655949b0e6f44, type: 3}
+  - {fileID: 5098307143086145476, guid: 0767a30679baba9418cc96f6ba819cde, type: 3}
+  - {fileID: 1145405119575538233, guid: 198ab3df0e5ea5a4d83da1bb63820281, type: 3}
+  - {fileID: 1044928448257761999, guid: bdcfae768bd7e434abf839216c88011a, type: 3}
+  - {fileID: 587248071072036221, guid: f3e2ec569b28f284e9c0fc855ecf2977, type: 3}
+  - {fileID: 3607679029827436919, guid: dfdf0d8c6724672429da407cea5bd93b, type: 3}
+  - {fileID: 8017841961165084416, guid: 0647ae2835f56844995e30a985f61590, type: 3}
+  - {fileID: 4265243230851211914, guid: 2d89c5939e7dc814ca3a991fb7d7e996, type: 3}
+  - {fileID: 7376569630953189675, guid: e56ee9133fab2704f8ebc4671c259c37, type: 3}
+  - {fileID: 6810857171780679179, guid: 783eb9d0903c6b44da5b2584c630a7b8, type: 3}
+  - {fileID: 8843822641594852707, guid: a3a733b60d6ca8444bc2a7a0dd2dc9db, type: 3}
+  - {fileID: 643583030870739639, guid: f4077cb99c1b16343a9049315857139b, type: 3}
+  - {fileID: 1224509227691578221, guid: 679d05d663c1e4a4ead100cf07bdac00, type: 3}
+  - {fileID: 1872073055802362713, guid: 4374550fdced00a4e95fed5a8a249fee, type: 3}
+  - {fileID: 6130207449296167241, guid: c00bdd3dc76dcb544bd5c4a6688d379d, type: 3}
+  - {fileID: 1286051148218989833, guid: 05bb5f8fbd212414ea4e6868b2d530b9, type: 3}
+  - {fileID: 3316321234162581959, guid: 5eb448cd3e069334cb2624d5a3d72194, type: 3}
+  - {fileID: 204662656737929166, guid: 990df6d3c48c23542858f7e0f7df7431, type: 3}
+  - {fileID: 5833295565868516911, guid: 454dfc44e80a8684e9c1b5b1197bc52a, type: 3}
+  - {fileID: 2407556076644564724, guid: 7af99910fb677eb47a5ed6b566d7d5e6, type: 3}
+  - {fileID: 6130207449296167241, guid: c00bdd3dc76dcb544bd5c4a6688d379d, type: 3}
 --- !u!114 &109417597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,7 +1023,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a5b3850fc62df4cbd7887c0ad485f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs: []
+  environmentFactory: {fileID: 109417596}
+  distanceBetweenObstacles: 5
+  startOffsetonZaxis: -100
+  buildings: 40
+  rightOffset: 5
+  leftOffset: -5
+  height: 0
 --- !u!1 &112654018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,7 +5404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -7615,7 +7643,7 @@ Transform:
   m_Children:
   - {fileID: 1470730096}
   m_Father: {fileID: 1273555012}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961281977
 GameObject:
@@ -8248,7 +8276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1097935569
 Transform:
   m_ObjectHideFlags: 0
@@ -8264,7 +8292,7 @@ Transform:
   - {fileID: 963402164}
   - {fileID: 12900829}
   m_Father: {fileID: 1273555012}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1141706821
 GameObject:
@@ -9930,8 +9958,8 @@ Transform:
   - {fileID: 10576396}
   - {fileID: 1255676016}
   - {fileID: 129083594}
-  - {fileID: 1097935569}
   - {fileID: 958554486}
+  - {fileID: 1097935569}
   - {fileID: 2087082895}
   m_Father: {fileID: 0}
   m_RootOrder: 2
