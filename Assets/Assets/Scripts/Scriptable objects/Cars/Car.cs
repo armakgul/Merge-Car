@@ -23,4 +23,5 @@ public class Car : ScriptableObject
 
     public bool isPurchasable;
     
+    public void XYZ() {}
 }

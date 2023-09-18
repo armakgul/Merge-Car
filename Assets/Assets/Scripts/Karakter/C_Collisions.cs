@@ -5,7 +5,7 @@ using System;
 
 public class C_Collisions : MonoBehaviour
 {
-       [SerializeField] public float damage;
+       [SerializeField] float damage;
 
       
     private  void OnTriggerEnter(Collider other) {
