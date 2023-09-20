@@ -609,6 +609,7 @@ GameObject:
   - component: {fileID: 3952668211717716693}
   - component: {fileID: 8845603982713184513}
   - component: {fileID: 5821921530465990366}
+  - component: {fileID: 8920585802431748611}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -707,3 +708,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deltaAmount: 2
+--- !u!114 &8920585802431748611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459416950542693081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef65fe89cc1d4b4289c0267443ba7b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 60559c3d72d01f749934fccd8974dc58, type: 2}
+  startColor: {r: 1, g: 1, b: 1, a: 0}
+  endColor: {r: 0.41738117, g: 1, b: 0, a: 0.5254902}
+  time: 0.5

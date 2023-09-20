@@ -6,7 +6,7 @@ public class WallObstacle : MonoBehaviour
 {
     public float damageAmount;
 
-    private  void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other) {
         
         if (other.CompareTag("Player")) 
         {            
