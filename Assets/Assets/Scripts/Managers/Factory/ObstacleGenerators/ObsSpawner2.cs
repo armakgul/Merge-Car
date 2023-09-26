@@ -5,9 +5,11 @@ using System;
 
 public class ObsSpawner2 : MonoBehaviour
 {
+
+    public GameObject sectionTwoTrigger;
     [SerializeField] private ObsFactorySectionTwo obstacleFactorySectionTwo;
-    [SerializeField] float distanceBetweenObstacles = 10f;  // Set to desired distance
-    [SerializeField] private int laneCount = 10;
+    public float distanceBetweenObstacles = 0;  // Set to desired distance
+    public int laneCount = 0;
 
     public float laneWidth;
     private float spawnDistance;
@@ -17,7 +19,6 @@ public class ObsSpawner2 : MonoBehaviour
 
 
     public List<GameObject> spawnedObstacles = new List<GameObject>();
-
 
     public void OnEnable() {
         levelManager.OnSectionTwoStarted += SpawnObstacleSets;
@@ -43,7 +44,7 @@ public class ObsSpawner2 : MonoBehaviour
         for (int i = 0; i < laneCount; i++)
         {
 
-            float zPos = i * distanceBetweenObstacles + spawnOffset;
+            float zPos = i * distanceBetweenObstacles + spawnOffset + sectionTwoTrigger.transform.position.z;
 
             // Spawn the 1st obstacle type
             Vector3 position = new Vector3(-laneWidth, height, zPos);

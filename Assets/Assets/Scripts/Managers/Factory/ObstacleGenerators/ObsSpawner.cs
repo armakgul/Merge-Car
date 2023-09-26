@@ -5,10 +5,11 @@ using UnityEngine;
 public class ObsSpawner : MonoBehaviour
 {
     [SerializeField] private ObsFactory obstacleFactory;
-    [SerializeField] float distanceBetweenObstacles = 10f;
-    [SerializeField] private int obstacles = 10;
+    public float distanceBetweenObstacles = 0f;
+    public int obstacles = 0;
     public float laneWidth;
     private float spawnDistance;
+
 
     // Single obstacle spawn chances
     public float[] spawnChances = new float[]
