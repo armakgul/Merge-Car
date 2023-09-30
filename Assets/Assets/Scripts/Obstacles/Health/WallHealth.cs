@@ -13,9 +13,9 @@ public class WallHealth : MonoBehaviour, IDamagable
         
         if (health<=0)
         {   
-            Instantiate(explosion, transform.position, Quaternion.identity);
+            GameObject currentExpo = Instantiate(explosion, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
-
+            Destroy(currentExpo, 2f);
         } 
 
     }
