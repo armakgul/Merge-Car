@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class MapGenerator : MonoBehaviour
 {
+    public GameObject player;
     public ObsSpawner sectionOneSpawner;
     public ObsSpawner2 sectionTwoSpawner;
 
@@ -36,6 +37,8 @@ public class MapGenerator : MonoBehaviour
     [Header ("DeadTrigger (from ramp)")]
     public GameObject deadTrigger;
     [SerializeField] float OffsetdeadTrigger;
+
+    [Header ("")]
 
     float buildingCountForCalculatedLength;
 
@@ -74,14 +77,6 @@ public class MapGenerator : MonoBehaviour
         return sectionTwoLength;
     }
 
-
-    public void PositionMapPlane () {
-
-        Vector3 position = Vector3.zero;
-        GameObject plane = Instantiate(walkPlane, position ,Quaternion.identity);
-        //scale değiştir. pozisyon 0 dan başlayacak
-    }
-
     public void PositionSectionTwoTrigger () {
 
         sectionTwoTrigger.transform.position = new Vector3 (0, 0.8f, CalculateSectionOneLength() + OffsetSectionTwoTrigger);
@@ -95,13 +90,11 @@ public class MapGenerator : MonoBehaviour
     }
 
     public void PositionSeaGround() {
-
         seaGround.transform.position = new Vector3 (0,0, ramp.transform.position.z + OffsetSeaGround);
-
     }
 
     void PositionNextCity () {
-        nextCity.transform.position = new Vector3 (0,0, seaGround.transform.position.z + OffsetNextCity);
+        nextCity.transform.position = new Vector3 (0,-14f, seaGround.transform.position.z + OffsetNextCity);
     }
 
     void PositionEndgameMultiplier () {
@@ -109,7 +102,24 @@ public class MapGenerator : MonoBehaviour
     }
 
     void PositionDeadTrigger () {
-        deadTrigger.transform.position = new Vector3 ( 0,0, ramp.transform.position.z + OffsetdeadTrigger);
+        deadTrigger.transform.position = new Vector3 ( 0,-13, ramp.transform.position.z + OffsetdeadTrigger);
     }
+
+    
+    public void PositionMapPlane () {
+
+        Vector3 position = walkPlane.transform.position;
+        float planeCount = (CalculateSectionOneLength() + CalculateSectionTwoLength() + 125)/10;
+         GameObject[] planes = new GameObject[(int)planeCount+1];
+
+        for (int i = 0; i < planeCount; i++)
+        {
+            planes[i] = Instantiate(walkPlane, new Vector3(0,0,player.transform.position.z + 10*i), Quaternion.identity);
+        }
+        Debug.Log(CalculateSectionOneLength() + CalculateSectionTwoLength());
+        
+    }
+
+   
 
 }

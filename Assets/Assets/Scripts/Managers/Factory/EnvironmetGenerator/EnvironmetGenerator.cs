@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnvironmetGenerator : MonoBehaviour
 {
+    public ObsSpawner sectionOneSpawner;
+    public ObsSpawner2 sectionTwoSpawner;
     
     [Header ("FACTORIES")]
     [SerializeField] private EnvironmentFactory environmentFactory;
@@ -12,7 +14,7 @@ public class EnvironmetGenerator : MonoBehaviour
     [Header ("Building settings")]
     [SerializeField] float distanceBetweenObstacles = 25f;  // Set to desired distance on Z axis
     [SerializeField] float startOffsetonZaxis = 25f;  // Set to desired distance on Z axis
-    [SerializeField] private int buildings = 20;
+    [SerializeField] private int buildings;
     [SerializeField] float rightOffset = 15f;
     [SerializeField] float leftOffset = -15f;
     [SerializeField] float height = 0;
@@ -20,17 +22,46 @@ public class EnvironmetGenerator : MonoBehaviour
     [Header ("Walkway settings")]
     [SerializeField] float distanceBetweenWalkways = 25f;  // Set to desired distance on Z axis
     [SerializeField] float walkwayZaxisStartOffset = 25f;  // Set to desired distance on Z axis
-    [SerializeField] private int walkwaycount = 20;
+    [SerializeField] private int walkwaycount;
     [SerializeField] float walkwayRightOffset = 15f;
     [SerializeField] float walkwayLeftOffset = -15f;
-
     [SerializeField] float heightWalkway = 0;
 
+    [Header ("Lights")]
+    GameObject[] lights;
+    [SerializeField] new GameObject light;
+
+
     private void Start() {
+
+        buildings = Mathf.CeilToInt((CalculateSectionTwoLength() + CalculateSectionOneLength()+125)/5);
+        walkwaycount = Mathf.CeilToInt((CalculateSectionTwoLength() + CalculateSectionOneLength()/50));
+
+        lights = new GameObject[(int) buildings + 1 ];
+
         SpawnBuildingRightSide();
         SpawnBuildingLeftSide();
         SpawnWalkwaysRightSide();
         SpawnWalkwaysLeftSide();
+        //SpawnLights();
+    }
+
+    public float CalculateSectionOneLength () {
+
+        float sectionOneObsCount = sectionOneSpawner.obstacles;
+        float sectionOneObsDistance = sectionOneSpawner.distanceBetweenObstacles;
+
+        float sectionOneLength = sectionOneObsCount * sectionOneObsDistance;
+        return sectionOneLength;
+
+    }
+
+    public float CalculateSectionTwoLength () {
+        float sectionTwoObsCount = sectionTwoSpawner.laneCount;
+        float sectionTwoObsDistance = sectionTwoSpawner.distanceBetweenObstacles;
+
+        float sectionTwoLength = sectionTwoObsCount * sectionTwoObsDistance;
+        return sectionTwoLength;
     }
 
 
@@ -68,7 +99,7 @@ public class EnvironmetGenerator : MonoBehaviour
     }
 
     private void SpawnWalkwaysRightSide() {
-        for (int i = 0; i < walkwaycount; i++)
+        for (int i = 0; i < buildings; i++)
         {
             // left side
             GameObject type = walkwayFactory.prefabs[Random.Range(0, walkwayFactory.prefabs.Length)];
@@ -83,7 +114,7 @@ public class EnvironmetGenerator : MonoBehaviour
 
     private void SpawnWalkwaysLeftSide() {
        
-        for (int i = 0; i < walkwaycount; i++)
+        for (int i = 0; i < buildings; i++)
      {
             // left side
             GameObject type = walkwayFactory.prefabs[Random.Range(0, walkwayFactory.prefabs.Length)];
@@ -95,6 +126,18 @@ public class EnvironmetGenerator : MonoBehaviour
             walkwayFactory.CreateWalkway(type, position, rotation);
         }
 
+    }
+
+    private void SpawnLights() {
+        for (int i = 0; i < buildings/5; i++)
+        {
+            lights[i] = Instantiate(light, new Vector3(walkwayLeftOffset , heightWalkway +5 , (-50 +distanceBetweenWalkways)*i*5),  Quaternion.identity);
+        }
+
+        for (int i = 0; i < buildings; i++)
+        {
+            lights[i] = Instantiate(light, new Vector3(walkwayRightOffset , heightWalkway +5 , (-50 +distanceBetweenWalkways)*i*5),  Quaternion.identity);
+        }
     }
 
 

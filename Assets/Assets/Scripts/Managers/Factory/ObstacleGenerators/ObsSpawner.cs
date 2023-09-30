@@ -32,7 +32,13 @@ public class ObsSpawner : MonoBehaviour
     private (ObsFactory.ObstacleType, ObsFactory.ObstacleType)[] obstaclePairs = new (ObsFactory.ObstacleType, ObsFactory.ObstacleType)[]
     {
         (ObsFactory.ObstacleType.Wall, ObsFactory.ObstacleType.Wall),
-        //(ObsFactory.ObstacleType.Wall, ObsFactory.ObstacleType.Wall),
+        (ObsFactory.ObstacleType.HealthGiver, ObsFactory.ObstacleType.HealthGiverRoad),
+        (ObsFactory.ObstacleType.ShieldGiver, ObsFactory.ObstacleType.Wall),
+        (ObsFactory.ObstacleType.HealthGiver, ObsFactory.ObstacleType.Wall),
+        (ObsFactory.ObstacleType.Wall, ObsFactory.ObstacleType.WeightReducerFirst),
+        (ObsFactory.ObstacleType.WeightReducerRoad, ObsFactory.ObstacleType.Wall),
+        (ObsFactory.ObstacleType.MoneyGiverFirst, ObsFactory.ObstacleType.Wall),
+        (ObsFactory.ObstacleType.Wall, ObsFactory.ObstacleType.Wall),
         // Add more pairs here
     };
 
