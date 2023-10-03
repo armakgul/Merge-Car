@@ -11,6 +11,7 @@ TagManager:
   - EconomyManager
   - SectionManager
   - FreefallDeadTrigger
+  - destroyer
   layers:
   - Default
   - TransparentFX

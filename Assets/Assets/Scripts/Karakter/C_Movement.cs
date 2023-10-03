@@ -131,7 +131,26 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
     public void Movement3() {
         rb.isKinematic = false;
         rb.useGravity = true;
-        rb.velocity = new Vector3(rb.velocity.x,  rb.velocity.y,  speed/weight*speed*2);
+        float speedModified;
+        if (speed<= 30 )
+        {
+            speedModified = speed/weight*speed*2;
+        } else if (speed <=50)
+        {
+            speedModified = speed/weight*speed*1.5f;
+        }
+        else if (speed <=100)
+        {
+            speedModified = speed/weight*speed;
+        }
+        else 
+        {
+            speedModified = 230f;
+        }
+
+        
+        rb.velocity = new Vector3(rb.velocity.x,  rb.velocity.y,  Math.Clamp(speedModified, 0f, 230f));
+        Debug.Log(speedModified);
     }
     public void Movement4 () {
         rb.isKinematic = true;

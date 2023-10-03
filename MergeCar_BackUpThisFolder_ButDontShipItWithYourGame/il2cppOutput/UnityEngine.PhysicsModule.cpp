@@ -203,6 +203,21 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 	};
 };
 
+// UnityEngine.WheelFrictionCurve
+struct WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810 
+{
+	// System.Single UnityEngine.WheelFrictionCurve::m_ExtremumSlip
+	float ___m_ExtremumSlip_0;
+	// System.Single UnityEngine.WheelFrictionCurve::m_ExtremumValue
+	float ___m_ExtremumValue_1;
+	// System.Single UnityEngine.WheelFrictionCurve::m_AsymptoteSlip
+	float ___m_AsymptoteSlip_2;
+	// System.Single UnityEngine.WheelFrictionCurve::m_AsymptoteValue
+	float ___m_AsymptoteValue_3;
+	// System.Single UnityEngine.WheelFrictionCurve::m_Stiffness
+	float ___m_Stiffness_4;
+};
+
 // UnityEngine.Collision
 struct Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0  : public RuntimeObject
 {
@@ -590,6 +605,10 @@ struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields
 
 // System.Void
 
+// UnityEngine.WheelFrictionCurve
+
+// UnityEngine.WheelFrictionCurve
+
 // UnityEngine.Collision
 
 // UnityEngine.Collision
@@ -823,8 +842,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float RaycastHit_get_distance_m035194B0E9BB62
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_get_velocity_Injected_mFD6FCA2857D9953AA953DB9AAF26A88CA881171C (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_ret, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Rigidbody::set_velocity_Injected(UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_velocity_Injected_m41B399E90D6AA49BABD3C178B3183AD3BBB4EAC4 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rigidbody::set_centerOfMass_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_centerOfMass_Injected_mF33B1D20FF435377B48235CDD322478131AE4B1B (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) ;
 // System.Void System.Array::Copy(System.Array,System.Array,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900 (RuntimeArray* ___0_sourceArray, RuntimeArray* ___1_destinationArray, int32_t ___2_length, const RuntimeMethod* method) ;
+// UnityEngine.CollisionFlags UnityEngine.CharacterController::Move_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CharacterController_Move_Injected_m7F25C33CF948858A8D5822EF73FAE7A16AE65C86 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_motion, const RuntimeMethod* method) ;
 // System.String UnityEngine.UnityString::Format(System.String,System.Object[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityString_Format_m98A0629641086A1BE20BBF7F4EADDE3FE3877D85 (String_t* ___0_fmt, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
 // System.String UnityEngine.PhysicsScene::ToString()
@@ -849,6 +872,26 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsScene_Internal_RaycastNonAlloc_mC339255AAFC484588C813D7BE2BDAE03797D26DB (PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE ___0_physicsScene, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ___1_ray, RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* ___2_raycastHits, float ___3_maxDistance, int32_t ___4_mask, int32_t ___5_queryTriggerInteraction, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.PhysicsScene::Internal_RaycastNonAlloc_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsScene_Internal_RaycastNonAlloc_Injected_mD6BA34F06BE743B2CBF46AA82EE6DDC9CCEC0F27 (PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE* ___0_physicsScene, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* ___1_ray, RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* ___2_raycastHits, float ___3_maxDistance, int32_t ___4_mask, int32_t ___5_queryTriggerInteraction, const RuntimeMethod* method) ;
+// System.Single UnityEngine.WheelFrictionCurve::get_extremumSlip()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_extremumSlip_mA9ED9E7649E5CB7981D5F580800B14581AAE2274 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.WheelFrictionCurve::set_extremumSlip(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_extremumSlip_m9001B1CEF04F1B96DCADDC195AEE27B154E86C1E (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) ;
+// System.Single UnityEngine.WheelFrictionCurve::get_extremumValue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_extremumValue_mD8481A6FBF758B06DA59A911B3FB2E95299C2F34 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.WheelFrictionCurve::set_extremumValue(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_extremumValue_m20B792FE59A3FC99CE593F30B718298D6D4AAB6E (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) ;
+// System.Single UnityEngine.WheelFrictionCurve::get_asymptoteSlip()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_asymptoteSlip_m89B5E0129E6B43E765E97F76D198BD9EAC6CE755 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.WheelFrictionCurve::set_asymptoteSlip(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_asymptoteSlip_mC97F60DD6CD02E5C5124ABEDD9C2E9B07307438C (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) ;
+// System.Single UnityEngine.WheelFrictionCurve::get_asymptoteValue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_asymptoteValue_mA7F621299782717BAD2F3AEFFB88D153DB1F457F (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.WheelFrictionCurve::set_asymptoteValue(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_asymptoteValue_m9D22E9A885235D2309214936A813EEC64DBD0B43 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) ;
+// System.Single UnityEngine.WheelFrictionCurve::get_stiffness()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_stiffness_mD8032249050920ECEB2C5F4EE723C0901A1FF8F6 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.WheelFrictionCurve::set_stiffness(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::Normalize(UnityEngine.Vector3)
@@ -2031,6 +2074,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_isKinematic_m6C3FD3EA358DA
 	_il2cpp_icall_func = (Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::set_isKinematic(System.Boolean)");
 	_il2cpp_icall_func(__this, ___0_value);
 }
+// System.Void UnityEngine.Rigidbody::set_centerOfMass(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_centerOfMass_m9D4A68D102498C7DBCD91278FF5EE7EE0BF2B188 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Rigidbody_set_centerOfMass_Injected_mF33B1D20FF435377B48235CDD322478131AE4B1B(__this, (&___0_value), NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.Rigidbody::get_velocity_Injected(UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_get_velocity_Injected_mFD6FCA2857D9953AA953DB9AAF26A88CA881171C (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_ret, const RuntimeMethod* method) 
 {
@@ -2047,6 +2098,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_velocity_Injected_m41B399E
 	static Rigidbody_set_velocity_Injected_m41B399E90D6AA49BABD3C178B3183AD3BBB4EAC4_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Rigidbody_set_velocity_Injected_m41B399E90D6AA49BABD3C178B3183AD3BBB4EAC4_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::set_velocity_Injected(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
+// System.Void UnityEngine.Rigidbody::set_centerOfMass_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_centerOfMass_Injected_mF33B1D20FF435377B48235CDD322478131AE4B1B (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Rigidbody_set_centerOfMass_Injected_mF33B1D20FF435377B48235CDD322478131AE4B1B_ftn) (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*);
+	static Rigidbody_set_centerOfMass_Injected_mF33B1D20FF435377B48235CDD322478131AE4B1B_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_set_centerOfMass_Injected_mF33B1D20FF435377B48235CDD322478131AE4B1B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::set_centerOfMass_Injected(UnityEngine.Vector3&)");
 	_il2cpp_icall_func(__this, ___0_value);
 }
 #ifdef __clang__
@@ -2213,6 +2273,35 @@ IL_000a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// UnityEngine.CollisionFlags UnityEngine.CharacterController::Move(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CharacterController_Move_mE3F7AC1B4A2D6955980811C088B68ED3A31D2DA4 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_motion, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0;
+		L_0 = CharacterController_Move_Injected_m7F25C33CF948858A8D5822EF73FAE7A16AE65C86(__this, (&___0_motion), NULL);
+		return L_0;
+	}
+}
+// System.Boolean UnityEngine.CharacterController::get_isGrounded()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CharacterController_get_isGrounded_m548072EC190878925C0F97595B6C307714EFDD67 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, const RuntimeMethod* method) 
+{
+	typedef bool (*CharacterController_get_isGrounded_m548072EC190878925C0F97595B6C307714EFDD67_ftn) (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A*);
+	static CharacterController_get_isGrounded_m548072EC190878925C0F97595B6C307714EFDD67_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CharacterController_get_isGrounded_m548072EC190878925C0F97595B6C307714EFDD67_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CharacterController::get_isGrounded()");
+	bool icallRetVal = _il2cpp_icall_func(__this);
+	return icallRetVal;
+}
+// UnityEngine.CollisionFlags UnityEngine.CharacterController::Move_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CharacterController_Move_Injected_m7F25C33CF948858A8D5822EF73FAE7A16AE65C86 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_motion, const RuntimeMethod* method) 
+{
+	typedef int32_t (*CharacterController_Move_Injected_m7F25C33CF948858A8D5822EF73FAE7A16AE65C86_ftn) (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*);
+	static CharacterController_Move_Injected_m7F25C33CF948858A8D5822EF73FAE7A16AE65C86_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CharacterController_Move_Injected_m7F25C33CF948858A8D5822EF73FAE7A16AE65C86_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CharacterController::Move_Injected(UnityEngine.Vector3&)");
+	int32_t icallRetVal = _il2cpp_icall_func(__this, ___0_motion);
+	return icallRetVal;
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -2646,6 +2735,219 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsScene_Internal_RaycastNonAlloc
 	_il2cpp_icall_func = (PhysicsScene_Internal_RaycastNonAlloc_Injected_mD6BA34F06BE743B2CBF46AA82EE6DDC9CCEC0F27_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.PhysicsScene::Internal_RaycastNonAlloc_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)");
 	int32_t icallRetVal = _il2cpp_icall_func(___0_physicsScene, ___1_ray, ___2_raycastHits, ___3_maxDistance, ___4_mask, ___5_queryTriggerInteraction);
 	return icallRetVal;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Single UnityEngine.WheelFrictionCurve::get_extremumSlip()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_extremumSlip_mA9ED9E7649E5CB7981D5F580800B14581AAE2274 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___m_ExtremumSlip_0;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		float L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  float WheelFrictionCurve_get_extremumSlip_mA9ED9E7649E5CB7981D5F580800B14581AAE2274_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	float _returnValue;
+	_returnValue = WheelFrictionCurve_get_extremumSlip_mA9ED9E7649E5CB7981D5F580800B14581AAE2274(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void UnityEngine.WheelFrictionCurve::set_extremumSlip(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_extremumSlip_m9001B1CEF04F1B96DCADDC195AEE27B154E86C1E (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_ExtremumSlip_0 = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void WheelFrictionCurve_set_extremumSlip_m9001B1CEF04F1B96DCADDC195AEE27B154E86C1E_AdjustorThunk (RuntimeObject* __this, float ___0_value, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	WheelFrictionCurve_set_extremumSlip_m9001B1CEF04F1B96DCADDC195AEE27B154E86C1E(_thisAdjusted, ___0_value, method);
+}
+// System.Single UnityEngine.WheelFrictionCurve::get_extremumValue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_extremumValue_mD8481A6FBF758B06DA59A911B3FB2E95299C2F34 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___m_ExtremumValue_1;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		float L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  float WheelFrictionCurve_get_extremumValue_mD8481A6FBF758B06DA59A911B3FB2E95299C2F34_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	float _returnValue;
+	_returnValue = WheelFrictionCurve_get_extremumValue_mD8481A6FBF758B06DA59A911B3FB2E95299C2F34(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void UnityEngine.WheelFrictionCurve::set_extremumValue(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_extremumValue_m20B792FE59A3FC99CE593F30B718298D6D4AAB6E (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_ExtremumValue_1 = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void WheelFrictionCurve_set_extremumValue_m20B792FE59A3FC99CE593F30B718298D6D4AAB6E_AdjustorThunk (RuntimeObject* __this, float ___0_value, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	WheelFrictionCurve_set_extremumValue_m20B792FE59A3FC99CE593F30B718298D6D4AAB6E(_thisAdjusted, ___0_value, method);
+}
+// System.Single UnityEngine.WheelFrictionCurve::get_asymptoteSlip()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_asymptoteSlip_m89B5E0129E6B43E765E97F76D198BD9EAC6CE755 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___m_AsymptoteSlip_2;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		float L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  float WheelFrictionCurve_get_asymptoteSlip_m89B5E0129E6B43E765E97F76D198BD9EAC6CE755_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	float _returnValue;
+	_returnValue = WheelFrictionCurve_get_asymptoteSlip_m89B5E0129E6B43E765E97F76D198BD9EAC6CE755(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void UnityEngine.WheelFrictionCurve::set_asymptoteSlip(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_asymptoteSlip_mC97F60DD6CD02E5C5124ABEDD9C2E9B07307438C (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_AsymptoteSlip_2 = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void WheelFrictionCurve_set_asymptoteSlip_mC97F60DD6CD02E5C5124ABEDD9C2E9B07307438C_AdjustorThunk (RuntimeObject* __this, float ___0_value, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	WheelFrictionCurve_set_asymptoteSlip_mC97F60DD6CD02E5C5124ABEDD9C2E9B07307438C(_thisAdjusted, ___0_value, method);
+}
+// System.Single UnityEngine.WheelFrictionCurve::get_asymptoteValue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_asymptoteValue_mA7F621299782717BAD2F3AEFFB88D153DB1F457F (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___m_AsymptoteValue_3;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		float L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  float WheelFrictionCurve_get_asymptoteValue_mA7F621299782717BAD2F3AEFFB88D153DB1F457F_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	float _returnValue;
+	_returnValue = WheelFrictionCurve_get_asymptoteValue_mA7F621299782717BAD2F3AEFFB88D153DB1F457F(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void UnityEngine.WheelFrictionCurve::set_asymptoteValue(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_asymptoteValue_m9D22E9A885235D2309214936A813EEC64DBD0B43 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_AsymptoteValue_3 = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void WheelFrictionCurve_set_asymptoteValue_m9D22E9A885235D2309214936A813EEC64DBD0B43_AdjustorThunk (RuntimeObject* __this, float ___0_value, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	WheelFrictionCurve_set_asymptoteValue_m9D22E9A885235D2309214936A813EEC64DBD0B43(_thisAdjusted, ___0_value, method);
+}
+// System.Single UnityEngine.WheelFrictionCurve::get_stiffness()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelFrictionCurve_get_stiffness_mD8032249050920ECEB2C5F4EE723C0901A1FF8F6 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___m_Stiffness_4;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		float L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  float WheelFrictionCurve_get_stiffness_mD8032249050920ECEB2C5F4EE723C0901A1FF8F6_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	float _returnValue;
+	_returnValue = WheelFrictionCurve_get_stiffness_mD8032249050920ECEB2C5F4EE723C0901A1FF8F6(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void UnityEngine.WheelFrictionCurve::set_stiffness(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5 (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_Stiffness_4 = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5_AdjustorThunk (RuntimeObject* __this, float ___0_value, const RuntimeMethod* method)
+{
+	WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*>(__this + _offset);
+	WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5(_thisAdjusted, ___0_value, method);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

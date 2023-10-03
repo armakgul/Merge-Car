@@ -38,7 +38,7 @@ public class ZombieMovement : MonoBehaviour
         }
         animator = GetComponent<Animator>();
 
-        moveSpeed = Random.Range(1,3);
+        moveSpeed = Random.Range(5,10);
     }
 
     private void MoveTowardsPlayerIfNeeded()

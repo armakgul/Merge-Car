@@ -643,7 +643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 5638929524508740233, guid: 9c015ea40dcc3554c8c24c0ba661d507, type: 3}
-  count: 5
+  count: 2
+  zombieOn: 1
 --- !u!1 &3676801223692746433
 GameObject:
   m_ObjectHideFlags: 0
