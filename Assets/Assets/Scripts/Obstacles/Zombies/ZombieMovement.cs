@@ -43,7 +43,7 @@ public class ZombieMovement : MonoBehaviour
 
     private void MoveTowardsPlayerIfNeeded()
     {
-        if (IsPlayerWithinRange(detectionRadius))
+        if (IsPlayerWithinRange(detectionRadius) && LevelManager.Instance.currentState == LevelManager.GameStates.section1)
         {
             MoveTowardsPlayer();
         }
