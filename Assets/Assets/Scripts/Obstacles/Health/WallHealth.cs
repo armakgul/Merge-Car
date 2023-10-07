@@ -5,7 +5,7 @@ using UnityEngine;
 public class WallHealth : MonoBehaviour, IDamagable
 {
     [SerializeField] public float health;
-    public GameObject explosion;
+    //public GameObject explosion;
 
     public void Hit(float damageAmount) {   
 
@@ -13,9 +13,10 @@ public class WallHealth : MonoBehaviour, IDamagable
         
         if (health<=0)
         {   
-            GameObject currentExpo = Instantiate(explosion, transform.position, Quaternion.identity);
-            gameObject.SetActive(false);
-            Destroy(currentExpo, 2f);
+            //GameObject currentExpo = Instantiate(explosion, transform.position, Quaternion.identity);
+            //gameObject.SetActive(false);
+            //Destroy(currentExpo, 2f);
+            Destroy(gameObject, 2f);
         } 
 
     }

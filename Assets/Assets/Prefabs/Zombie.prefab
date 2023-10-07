@@ -125,7 +125,7 @@ MonoBehaviour:
   fireRange: 30
   gunEndPoint: {fileID: 5638929523969685240}
   damageAmountFromBullet: -1
-  expoAnim: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
+  expoAnim: {fileID: 0}
 --- !u!1001 &5638929525178713391
 PrefabInstance:
   m_ObjectHideFlags: 0

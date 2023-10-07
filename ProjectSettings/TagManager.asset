@@ -12,6 +12,7 @@ TagManager:
   - SectionManager
   - FreefallDeadTrigger
   - destroyer
+  - wall
   layers:
   - Default
   - TransparentFX

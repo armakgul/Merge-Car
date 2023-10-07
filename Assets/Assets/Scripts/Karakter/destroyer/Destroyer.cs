@@ -10,7 +10,7 @@ public class Destroyer : MonoBehaviour
       
     private  void OnTriggerEnter(Collider other) {
         
-        if (other.CompareTag("Obs")) 
+        if (other.CompareTag("Obs") || other.CompareTag("wall")) 
         { 
             Destroy(other);
             /*

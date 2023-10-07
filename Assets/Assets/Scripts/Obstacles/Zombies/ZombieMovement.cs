@@ -88,8 +88,12 @@ private void FacePlayer()
 
     private void PlayShootingAnimation()
     {
-        GameObject currentFireAnim = Instantiate(expoAnim, gunEndPoint.position, Quaternion.identity);
-        Destroy(currentFireAnim, .5f);
+        
+        if (expoAnim != null) {
+            GameObject currentFireAnim = Instantiate(expoAnim, gunEndPoint.position, Quaternion.identity);
+            Destroy(currentFireAnim, .5f);
+        }
+        
     }
 
     private void RaycastForPlayerHit()

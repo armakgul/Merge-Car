@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZombieHealth : MonoBehaviour, IDamagable
 {
     [SerializeField] public float health;
-    public GameObject explosion;
+    //public GameObject explosion;
     
 
     public void Hit(float damageAmount) {   
@@ -14,9 +14,10 @@ public class ZombieHealth : MonoBehaviour, IDamagable
         
         if (health<=0)
         {   
-            GameObject currentexpo = Instantiate(explosion, transform.position, Quaternion.identity);
+            
+            //GameObject currentexpo = Instantiate(explosion, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
-            Destroy(currentexpo, 2f);
+            //Destroy(currentexpo, 2f);
         } 
 
     }
