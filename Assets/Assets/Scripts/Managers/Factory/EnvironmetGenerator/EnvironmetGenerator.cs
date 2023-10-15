@@ -10,6 +10,8 @@ public class EnvironmetGenerator : MonoBehaviour
     [Header ("FACTORIES")]
     [SerializeField] private EnvironmentFactory environmentFactory;
     [SerializeField] private WalkwayFactory walkwayFactory;
+    [SerializeField] private CoinLaneFactory coinLaneFactory;
+    [SerializeField] private CoinFactory coinFactory;
 
     [Header ("Building settings")]
     [SerializeField] float distanceBetweenObstacles = 25f;  // Set to desired distance on Z axis
@@ -27,6 +29,22 @@ public class EnvironmetGenerator : MonoBehaviour
     [SerializeField] float walkwayLeftOffset = -15f;
     [SerializeField] float heightWalkway = 0;
 
+    [Header ("CoinLane settings")]
+    [SerializeField] float distanceBetweenCoinLanes = 25f;  // Set to desired distance on Z axis
+    [SerializeField] float coinLaneZaxisStartOffset = 25f;  // Set to desired distance on Z axis
+    [SerializeField] private int coinLanecount;
+    [SerializeField] float coinLaneRightOffset = 15f;
+    [SerializeField] float coinLaneLeftOffset = -15f;
+    [SerializeField] float coinLaneHeight = 0;
+
+    [Header ("Coin settings")]
+    [SerializeField] float distanceBetweenCoins = 25f;  // Set to desired distance on Z axis
+    [SerializeField] float coinsZaxisStartOffset = 25f;  // Set to desired distance on Z axis
+    [SerializeField] private int coinscount;
+    [SerializeField] float coinsRightOffset = 15f;
+    [SerializeField] float coinsLeftOffset = -15f;
+    [SerializeField] float coinsHeight = 0;
+
     [Header ("Lights")]
     GameObject[] lights;
     [SerializeField] new GameObject light;
@@ -35,14 +53,22 @@ public class EnvironmetGenerator : MonoBehaviour
     private void Start() {
 
         buildings = Mathf.CeilToInt((CalculateSectionTwoLength() + CalculateSectionOneLength()+125)/5);
-        walkwaycount = Mathf.CeilToInt((CalculateSectionTwoLength() + CalculateSectionOneLength()/50));
+        //walkwaycount = Mathf.CeilToInt((CalculateSectionTwoLength() + CalculateSectionOneLength()/50));
 
         lights = new GameObject[(int) buildings + 1 ];
 
         SpawnBuildingRightSide();
         SpawnBuildingLeftSide();
+
         SpawnWalkwaysRightSide();
         SpawnWalkwaysLeftSide();
+
+        SpawnCoinLaneLeftSide();
+        SpawnCoinLaneRightSide();
+
+        SpawnCoinRightSide();
+        SpawnCoinLeftSide();
+
         //SpawnLights();
     }
 
@@ -124,6 +150,66 @@ public class EnvironmetGenerator : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0,90,0);
 
             walkwayFactory.CreateWalkway(type, position, rotation);
+        }
+
+    }
+
+    private void SpawnCoinLaneRightSide() {
+        for (int i = 0; i < buildings; i++)
+        {
+            // left side
+            GameObject type = coinLaneFactory.prefabs[Random.Range(0, coinLaneFactory.prefabs.Length)];
+
+            Vector3 position = new Vector3(coinLaneRightOffset, coinLaneHeight, coinLaneZaxisStartOffset + distanceBetweenCoinLanes * i);
+            
+            Quaternion rotation = Quaternion.Euler(0,-90,0);
+
+            coinLaneFactory.CreateCoinLane(type, position, rotation);
+        }
+    }
+
+    private void SpawnCoinLaneLeftSide() {
+       
+        for (int i = 0; i < buildings; i++)
+     {
+            // left side
+            GameObject type = coinLaneFactory.prefabs[Random.Range(0, coinLaneFactory.prefabs.Length)];
+
+            Vector3 position = new Vector3(coinLaneLeftOffset, coinLaneHeight, coinLaneZaxisStartOffset + distanceBetweenCoinLanes * i);
+            
+            Quaternion rotation = Quaternion.Euler(0,90,0);
+
+            coinLaneFactory.CreateCoinLane(type, position, rotation);
+        }
+
+    }
+
+    private void SpawnCoinRightSide() {
+        for (int i = 0; i < buildings; i++)
+        {
+            // right side
+            GameObject type = coinFactory.prefabs[Random.Range(0, coinFactory.prefabs.Length)];
+
+            Vector3 position = new Vector3(coinsRightOffset, coinsHeight, coinsZaxisStartOffset + distanceBetweenCoins * i);
+            
+            Quaternion rotation = Quaternion.Euler(0,-90,0);
+
+            coinFactory.CreateCoins(type, position, rotation);
+        }
+    }
+
+    private void SpawnCoinLeftSide() {
+       
+        for (int i = 0; i < buildings; i++)
+     {
+            // left side
+            GameObject type = coinFactory.prefabs[Random.Range(0, coinFactory.prefabs.Length)];
+
+            Vector3 position = new Vector3(coinsLeftOffset, coinsHeight, coinsZaxisStartOffset + distanceBetweenCoins * i);
+            
+            Quaternion rotation = Quaternion.Euler(0,90,0);
+
+            coinFactory.CreateCoins(type, position, rotation);
         }
 
     }

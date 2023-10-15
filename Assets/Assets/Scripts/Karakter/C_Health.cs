@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using Unity.Mathematics;
 
 public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
 {
@@ -49,10 +50,17 @@ public class C_Health : MonoBehaviour, IDamagable, ICurable, IShieldable
         {
             float restDamage = MathF.Abs(shield - damageAmount);
             shield = 0;
-            health -= restDamage;
+            if (levelManager.currentState == LevelManager.GameStates.section1)
+            {
+                health = Mathf.Clamp(health, 1 , (health-restDamage));
             UpdateUI();
+            } else if (levelManager.currentState == LevelManager.GameStates.section2)
+            {
+                health -= restDamage;
+            UpdateUI();
+            }
+            
         }
-        
         
         // DEATH SECTION
         if (health<=0)

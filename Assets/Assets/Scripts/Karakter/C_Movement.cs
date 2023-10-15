@@ -18,6 +18,8 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
     [SerializeField] public Camera orthoCamera;
     [SerializeField] public float cameraCorrectionMultiplier;
     public GameObject player;
+    [SerializeField] float leftClamp = -4.5f;
+    [SerializeField] float rightClamp = 4.5f;
 
 
     //mouse drag distance
@@ -179,7 +181,7 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
 
                 if (player.transform.position.x <= -4.5f || player.transform.position.x >= 4.5f)
                 {
-                    mouseDistance.x = Mathf.Clamp(mouseDistance.x, -4.5f, 4.5f);
+                    mouseDistance.x = Mathf.Clamp(mouseDistance.x, leftClamp, rightClamp);
                 }
                 
                 lastPosition = newPosition;
@@ -190,7 +192,7 @@ public class C_Movement : MonoBehaviour, ISpeedable, IWeightable
 
     public void MoveCharacter(float xPos , float speed) {
         
-        player.transform.position = new Vector3(Mathf.Clamp(xPos/cameraCorrectionMultiplier, -4.5f, + 4.5f), 0.51f , player.transform.position.z + Time.deltaTime * speed);
+        player.transform.position = new Vector3(Mathf.Clamp(xPos/cameraCorrectionMultiplier, leftClamp, + rightClamp), 0.51f , player.transform.position.z + Time.deltaTime * speed);
 
         player.transform.eulerAngles = Vector3.Lerp(Vector3.zero, Vector3.up*mouseDistance.x, 3000f*Time.deltaTime);
 
