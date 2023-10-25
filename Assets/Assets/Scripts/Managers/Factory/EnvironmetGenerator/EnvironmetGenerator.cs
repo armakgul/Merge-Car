@@ -49,6 +49,8 @@ public class EnvironmetGenerator : MonoBehaviour
     GameObject[] lights;
     [SerializeField] new GameObject light;
 
+    [SerializeField] bool buildingTrial = false;
+
 
     private void Start() {
 
@@ -93,7 +95,9 @@ public class EnvironmetGenerator : MonoBehaviour
 
      private void SpawnBuildingRightSide()
     {
-        for (int i = 0; i < buildings; i++)
+        if (!buildingTrial)
+        {
+            for (int i = 0; i < buildings; i++)
         {
 
             //Right side
@@ -105,12 +109,28 @@ public class EnvironmetGenerator : MonoBehaviour
 
             environmentFactory.CreateBuilding(type, position, rotation);
         }
+        } else {
+
+            for (int i = 0; i < buildings; i++) {
+            
+            GameObject type = environmentFactory.trialPrefab;
+
+            Vector3 position = new Vector3(rightOffset, height, startOffsetonZaxis + distanceBetweenObstacles * i);
+
+            Quaternion rotation = Quaternion.Euler(0,0,0);
+
+            environmentFactory.CreateBuilding(type, position, rotation);
+            }
+
+            
+        }
+        
 
     }
 
     private void SpawnBuildingLeftSide() {
 
-            
+            /*
         for (int i = 0; i < buildings; i++)
         {
             // left side
@@ -121,6 +141,35 @@ public class EnvironmetGenerator : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0,90,0);
 
             environmentFactory.CreateBuilding(type, position, rotation);
+        }*/
+        if (!buildingTrial)
+        {
+            for (int i = 0; i < buildings; i++)
+        {
+
+            //Right side
+            GameObject type = environmentFactory.prefabs[Random.Range(0, environmentFactory.prefabs.Length)];
+
+            Vector3 position = new Vector3(leftOffset, height, startOffsetonZaxis + distanceBetweenObstacles * i);
+
+            Quaternion rotation = Quaternion.Euler(0,90,0);
+
+            environmentFactory.CreateBuilding(type, position, rotation);
+        }
+        } else {
+
+            for (int i = 0; i < buildings; i++) {
+            
+            GameObject type = environmentFactory.trialPrefab;
+
+            Vector3 position = new Vector3(leftOffset, height, startOffsetonZaxis + distanceBetweenObstacles * i);
+
+            Quaternion rotation = Quaternion.Euler(0,180,0);
+
+            environmentFactory.CreateBuilding(type, position, rotation);
+            }
+
+            
         }
     }
 
@@ -187,7 +236,9 @@ public class EnvironmetGenerator : MonoBehaviour
     private void SpawnCoinRightSide() {
         for (int i = 0; i < buildings; i++)
         {
-            // right side
+            if (coinFactory.prefabs.Length !=0)
+            {
+                // right side
             GameObject type = coinFactory.prefabs[Random.Range(0, coinFactory.prefabs.Length)];
 
             Vector3 position = new Vector3(coinsRightOffset, coinsHeight, coinsZaxisStartOffset + distanceBetweenCoins * i);
@@ -195,6 +246,8 @@ public class EnvironmetGenerator : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0,-90,0);
 
             coinFactory.CreateCoins(type, position, rotation);
+            }
+            
         }
     }
 
@@ -202,6 +255,8 @@ public class EnvironmetGenerator : MonoBehaviour
        
         for (int i = 0; i < buildings; i++)
      {
+        if (coinFactory.prefabs.Length !=0)
+        {
             // left side
             GameObject type = coinFactory.prefabs[Random.Range(0, coinFactory.prefabs.Length)];
 
@@ -210,6 +265,8 @@ public class EnvironmetGenerator : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0,90,0);
 
             coinFactory.CreateCoins(type, position, rotation);
+        }
+            
         }
 
     }

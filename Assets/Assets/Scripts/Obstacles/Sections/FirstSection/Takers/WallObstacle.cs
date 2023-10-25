@@ -19,7 +19,7 @@ public class WallObstacle : MonoBehaviour
             {
                 damagable.Damage(damageAmount);
                 gameObject.tag = "wall";
-                gameObject.GetComponentInChildren<GameObject>().tag = "wall";
+                //gameObject.GetComponentInChildren<GameObject>().tag = "wall";
             }
         }
             
