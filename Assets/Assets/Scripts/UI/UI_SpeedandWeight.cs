@@ -23,6 +23,10 @@ public class UI_SpeedandWeight : MonoBehaviour
 
 
     private void Start() {
+
+        if(Application.isMobilePlatform)
+        QualitySettings.vSyncCount = 0;
+
         
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -53,6 +57,8 @@ public class UI_SpeedandWeight : MonoBehaviour
         //fps = 1f/Time.deltaTime;
 
         fpsCounter.text = Mathf.RoundToInt(CalculateFPS()).ToString();
+
+        //Application.targetFrameRate = 60;
     }
 
     float CalculateFPS() {

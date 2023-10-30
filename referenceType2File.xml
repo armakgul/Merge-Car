@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTypeDate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TypeDate>
+    <guid>87e7d1fa4cdf72d4996c05025e0dadba</guid>
+    <fileName>Assets/Plugins/unity-sweeper-main/UnitySweeper/Editor/AssetCollector.cs</fileName>
+    <timeStamp>2023-10-30T19:42:40.6859397+03:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>71f1152b46b4af046ba401826543617b</guid>
+    <fileName>Assets/Plugins/unity-sweeper-main/UnitySweeper/Editor/AssetReferenceCollection.cs</fileName>
+    <timeStamp>2023-10-30T19:42:40.7025699+03:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>f3fd61d6b205595499540dcdaac628c2</guid>
+    <fileName>Assets/Plugins/unity-sweeper-main/UnitySweeper/Editor/ClassReferenceCollection.cs</fileName>
+    <timeStamp>2023-10-30T19:42:40.717167+03:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>83bae9964c62b6b4f9f31b68c55355ca</guid>
+    <fileName>Assets/Plugins/unity-sweeper-main/UnitySweeper/Editor/CollectionData.cs</fileName>
+    <timeStamp>2023-10-30T19:42:40.7318136+03:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>1173731951229e643b7d3c75b8553eb1</guid>
+    <fileName>Assets/Plugins/unity-sweeper-main/UnitySweeper/Editor/FindUnusedAssetsWindow.cs</fileName>
+    <timeStamp>2023-10-30T19:42:40.7473197+03:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>68eba8900b372ad44a69bdaf0f75ea24</guid>
+    <fileName>Assets/Plugins/unity-sweeper-main/UnitySweeper/Editor/ShaderReferenceCollection.cs</fileName>
+    <timeStamp>2023-10-30T19:42:40.7624412+03:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>77bf4647e36d9ca42b762b0a665e9ce8</guid>
+    <fileName>Assets/Easy Destructible Wall/Scripts/DestructionManager.cs</fileName>
+    <timeStamp>2023-10-07T16:01:40.7392067+03:00</timeStamp>
+    <typeFullName>
+      <string>EasyDestuctibleWall.DestructionManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>72d55057b59b1c346b74c959c95265a0</guid>
+    <fileName>Assets/Easy Destructible Wall/Scripts/InvisibleForceGun.cs</fileName>
+    <timeStamp>2017-04-06T05:16:51+03:00</timeStamp>
+    <typeFullName>
+      <string>InvisibleForceGun</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>453ef9b97588ff84db2faeedffdaf133</guid>
+    <fileName>Assets/Easy Destructible Wall/Scripts/MouseOrbit.cs</fileName>
+    <timeStamp>2017-04-06T05:16:48+03:00</timeStamp>
+    <typeFullName>
+      <string>EasyDestuctibleWall.MouseOrbit</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>877d0eee7a3c2fe4694caa9f236f4187</guid>
+    <fileName>Assets/Assets/Scripts/Interfaces/ICurable.cs</fileName>
+    <timeStamp>2023-07-23T21:10:03.610889+03:00</timeStamp>
+    <typeFullName>
+      <string>ICurable</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ff7ed1e3772e8254b81a6c3daece078a</guid>
+    <fileName>Assets/Assets/Scripts/Interfaces/IDamagable.cs</fileName>
+    <timeStamp>2023-07-23T20:49:37.8750208+03:00</timeStamp>
+    <typeFullName>
+      <string>IDamagable</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8a075d8edb96b73439d95aa02a3e390b</guid>
+    <fileName>Assets/Assets/Scripts/Interfaces/IShieldable.cs</fileName>
+    <timeStamp>2023-07-24T22:01:08.7111925+03:00</timeStamp>
+    <typeFullName>
+      <string>IShieldable</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d88411cde929819439fcb6e056866109</guid>
+    <fileName>Assets/Assets/Scripts/Interfaces/ISpeedable.cs</fileName>
+    <timeStamp>2023-08-13T20:04:44.7981042+03:00</timeStamp>
+    <typeFullName>
+      <string>ISpeedable</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>223a18c77c981e1479e5598bdd04be6e</guid>
+    <fileName>Assets/Assets/Scripts/Interfaces/IWeightable.cs</fileName>
+    <timeStamp>2023-08-13T20:04:52.5752642+03:00</timeStamp>
+    <typeFullName>
+      <string>IWeightable</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>762aaf3c04177db48b1b1f9181dde062</guid>
+    <fileName>Assets/Assets/Scripts/kamera/CameraChange.cs</fileName>
+    <timeStamp>2023-08-27T11:09:29.6423732+03:00</timeStamp>
+    <typeFullName>
+      <string>CameraChange</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d0c750abcbb390d4d8224320a9649227</guid>
+    <fileName>Assets/Assets/Scripts/kamera/CameraMovement.cs</fileName>
+    <timeStamp>2023-08-13T19:37:34.3003727+03:00</timeStamp>
+    <typeFullName>
+      <string>CameraMovement</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>efd68d08d2988f242a2c2437e4ff33fe</guid>
+    <fileName>Assets/Assets/Scripts/Karakter/C_Collisions.cs</fileName>
+    <timeStamp>2023-09-10T20:28:17.2174283+03:00</timeStamp>
+    <typeFullName>
+      <string>C_Collisions</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>7515c279a567fe444bbc8788fc472ac9</guid>
+    <fileName>Assets/Assets/Scripts/Karakter/C_Health.cs</fileName>
+    <timeStamp>2023-10-15T11:10:48.4541656+03:00</timeStamp>
+    <typeFullName>
+      <string>C_Health</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>4aea65096b56a0642916ad2f97bd57c9</guid>
+    <fileName>Assets/Assets/Scripts/Karakter/C_Movement.cs</fileName>
+    <timeStamp>2023-10-15T10:06:15.5153004+03:00</timeStamp>
+    <typeFullName>
+      <string>C_Movement</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>2ea3fa26e60c819469f604f72a74606c</guid>
+    <fileName>Assets/Assets/Scripts/Karakter/C_Singleto.cs</fileName>
+    <timeStamp>2023-08-06T21:13:16.1915805+03:00</timeStamp>
+    <typeFullName>
+      <string>C_Singleto</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ed6f4e7c19dd4f6499fc6f68dccdff55</guid>
+    <fileName>Assets/Assets/Scripts/Karakter/TiresMovement.cs</fileName>
+    <timeStamp>2023-08-21T22:18:42.4682354+03:00</timeStamp>
+    <typeFullName>
+      <string>TiresMovement</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9ef65fe89cc1d4b4289c0267443ba7b1</guid>
+    <fileName>Assets/Assets/Scripts/Materials/ColorSwitcher.cs</fileName>
+    <timeStamp>2023-09-20T20:14:59.3338315+03:00</timeStamp>
+    <typeFullName>
+      <string>ColorSwitcher</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>529df056ef16f154f98bed24cd1a05fa</guid>
+    <fileName>Assets/Assets/Scripts/UI/StoreManager.cs</fileName>
+    <timeStamp>2023-08-22T20:17:45.9628958+03:00</timeStamp>
+    <typeFullName>
+      <string>StoreManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>2bbdb8d8cfbd21343828c60e799473a3</guid>
+    <fileName>Assets/Assets/Scripts/UI/UI_RewardScreen.cs</fileName>
+    <timeStamp>2023-08-19T20:44:57.7447793+03:00</timeStamp>
+    <typeFullName>
+      <string>UI_RewardScreen</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5e1a95056c158ee4faa958ea7b4f9771</guid>
+    <fileName>Assets/Assets/Scripts/UI/UI_SpeedandWeight.cs</fileName>
+    <timeStamp>2023-10-30T19:36:57.1162607+03:00</timeStamp>
+    <typeFullName>
+      <string>UI_SpeedandWeight</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8299c40be4c21d34db2c5a356e0ed3f3</guid>
+    <fileName>Assets/Assets/Scripts/UI/UI_Upgrades.cs</fileName>
+    <timeStamp>2023-08-13T16:10:34.205833+03:00</timeStamp>
+    <typeFullName>
+      <string>UI_Upgrades</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c365af44b92597f458abad506129f9b8</guid>
+    <fileName>Assets/Assets/Models/PROMETEO - Car Controller/Editor/PrometeoEditor.cs</fileName>
+    <timeStamp>2022-07-14T23:56:42+03:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>5f6d3ff905719c845a4a6404bc4d4162</guid>
+    <fileName>Assets/Assets/Models/PROMETEO - Car Controller/Scripts/CameraFollow.cs</fileName>
+    <timeStamp>2022-07-14T23:56:35+03:00</timeStamp>
+    <typeFullName>
+      <string>CameraFollow</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c0fefceefe666bb4682b272ec8c5bdd0</guid>
+    <fileName>Assets/Assets/Models/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs</fileName>
+    <timeStamp>2022-07-14T23:56:42+03:00</timeStamp>
+    <typeFullName>
+      <string>PrometeoCarController</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>4b7408ad19eb3ad44a35af48d0d2294b</guid>
+    <fileName>Assets/Assets/Models/PROMETEO - Car Controller/Scripts/PrometeoTouchInput.cs</fileName>
+    <timeStamp>2022-07-14T23:56:34+03:00</timeStamp>
+    <typeFullName>
+      <string>PrometeoTouchInput</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5ceb94f145a22ce479b1d61134a446bd</guid>
+    <fileName>Assets/Assets/Scripts/Karakter/destroyer/Destroyer.cs</fileName>
+    <timeStamp>2023-10-07T16:04:30.3072901+03:00</timeStamp>
+    <typeFullName>
+      <string>Destroyer</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b874fa7cf9d3cee4489deae58b4780a6</guid>
+    <fileName>Assets/Assets/Scripts/Managers/game manager/EconomyManager.cs</fileName>
+    <timeStamp>2023-08-19T21:47:07.6669289+03:00</timeStamp>
+    <typeFullName>
+      <string>EconomyManager</string>
+      <string>EconomyManager+MoneyChangedDelegate</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>fef22d18780b65545a1cdc95065127ff</guid>
+    <fileName>Assets/Assets/Scripts/Managers/game manager/LevelManager.cs</fileName>
+    <timeStamp>2023-08-27T10:37:35.9697764+03:00</timeStamp>
+    <typeFullName>
+      <string>LevelManager</string>
+      <string>LevelManager+GameStateChanged</string>
+      <string>LevelManager+GameStates</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>99c9770ceee22e548a8e4517cc86c3e9</guid>
+    <fileName>Assets/Assets/Scripts/Managers/game manager/SessionEconomy.cs</fileName>
+    <timeStamp>2023-08-20T14:36:43.1207028+03:00</timeStamp>
+    <typeFullName>
+      <string>SessionEconomy</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b9f3390864415b5408223d1cb6c7e393</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Triggers/FreefallDeadTrigger.cs</fileName>
+    <timeStamp>2023-08-13T15:51:32.2278071+03:00</timeStamp>
+    <typeFullName>
+      <string>FreefallDeadTrigger</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>06405ff80d3e12a4aa0d9d22a5519056</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Triggers/SectionTwoTrigger.cs</fileName>
+    <timeStamp>2023-08-06T11:50:21.3766111+03:00</timeStamp>
+    <typeFullName>
+      <string>SectionTwoTrigger</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>808f1f072d36ca94190a4d60c35bf2db</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Health/O_Health.cs</fileName>
+    <timeStamp>2023-09-20T20:46:11.565492+03:00</timeStamp>
+    <typeFullName>
+      <string>O_Health</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>55dcd3a04519c444f9e36c077e01e613</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Health/WallHealth.cs</fileName>
+    <timeStamp>2023-10-07T15:53:40.5175737+03:00</timeStamp>
+    <typeFullName>
+      <string>WallHealth</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>67138210530861e4bbe6eb2f865d41f2</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Other/Coin.cs</fileName>
+    <timeStamp>2023-10-15T11:01:18.6890749+03:00</timeStamp>
+    <typeFullName>
+      <string>Coin</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9b979c69dc9c19c408b0f202cc19f27a</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Other/ObstacleTypeControl.cs</fileName>
+    <timeStamp>2023-09-12T21:37:24.4393172+03:00</timeStamp>
+    <typeFullName>
+      <string>ObstacleTypeControl</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b4d7b47f2273a8a459a0ef8700ddb296</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/UI/O_Canvas.cs</fileName>
+    <timeStamp>2023-09-12T21:32:58.6504684+03:00</timeStamp>
+    <typeFullName>
+      <string>O_Canvas</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b4b986444751e93459c1bbfc90e54144</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Zombies/ZombieCollision.cs</fileName>
+    <timeStamp>2023-09-30T15:46:39.8118138+03:00</timeStamp>
+    <typeFullName>
+      <string>ZombieCollision</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>30d301fd03e645d4887428226a2d4270</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Zombies/ZombieHealth.cs</fileName>
+    <timeStamp>2023-10-06T18:46:10.0563434+03:00</timeStamp>
+    <typeFullName>
+      <string>ZombieHealth</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1e2b5f0afb0992d4eb340bc8dc024099</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Zombies/ZombieMovement.cs</fileName>
+    <timeStamp>2023-10-06T18:41:47.2079686+03:00</timeStamp>
+    <typeFullName>
+      <string>ZombieMovement</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>65f33e2b10983a6468905204e8927719</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Zombies/ZombieScript.cs</fileName>
+    <timeStamp>2023-09-30T15:35:22.9971103+03:00</timeStamp>
+    <typeFullName>
+      <string>ZombieScript</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ce00a52da6d7d1e4daece1853e8c0260</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Zombies/ZombieShooting.cs</fileName>
+    <timeStamp>2023-09-30T15:55:07.0311533+03:00</timeStamp>
+    <typeFullName>
+      <string>ZombieShooting</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d89df9aa8edec0b4d99e0fb612a4d811</guid>
+    <fileName>Assets/Assets/Scripts/Scriptable objects/Cars/Car.cs</fileName>
+    <timeStamp>2023-09-10T19:05:12.5644512+03:00</timeStamp>
+    <typeFullName>
+      <string>Car</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e4d8c9c0cba671c468eb63000f72216b</guid>
+    <fileName>Assets/Assets/Scripts/Scriptable objects/Engeller/Obstacle.cs</fileName>
+    <timeStamp>2023-08-13T21:56:28.8781279+03:00</timeStamp>
+    <typeFullName>
+      <string>Obstacle</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>165e5bf7062245e49947d208ca89d195</guid>
+    <fileName>Assets/Assets/Scripts/UI/anims/StartTapAnim.cs</fileName>
+    <timeStamp>2023-08-06T13:30:31.6352864+03:00</timeStamp>
+    <typeFullName>
+      <string>StartTapAnim</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>bce862fb8d320d645a2082cd150e6390</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/EndgameMultipliers/EndgameMultipliers.cs</fileName>
+    <timeStamp>2023-08-19T17:34:23.9326397+03:00</timeStamp>
+    <typeFullName>
+      <string>EndgameMultipliers</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5023cf860be30764dbdfe200e18c7441</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/EndgameMultipliers/SampleLayerMultiplier.cs</fileName>
+    <timeStamp>2023-08-20T13:03:20.5482329+03:00</timeStamp>
+    <typeFullName>
+      <string>SampleLayerMultiplier</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>90cbca7aba762904e9aea64f9932812d</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/EnvironmetGenerator/CoinFactory.cs</fileName>
+    <timeStamp>2023-10-25T22:35:36.5330265+03:00</timeStamp>
+    <typeFullName>
+      <string>CoinFactory</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>29687674dbde49f4198815884a545e48</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/EnvironmetGenerator/CoinLaneFactory.cs</fileName>
+    <timeStamp>2023-10-15T10:11:31.311527+03:00</timeStamp>
+    <typeFullName>
+      <string>CoinLaneFactory</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>89671e92d1a5a9d4c862e995920a626b</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/EnvironmetGenerator/EnvironmentFactory.cs</fileName>
+    <timeStamp>2023-10-23T20:42:05.9584996+03:00</timeStamp>
+    <typeFullName>
+      <string>EnvironmentFactory</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d1a5b3850fc62df4cbd7887c0ad485f6</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/EnvironmetGenerator/EnvironmetGenerator.cs</fileName>
+    <timeStamp>2023-10-25T22:40:17.369509+03:00</timeStamp>
+    <typeFullName>
+      <string>EnvironmetGenerator</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>486e669119136d546966a67c8e04c8e5</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/EnvironmetGenerator/WalkwayFactory.cs</fileName>
+    <timeStamp>2023-09-12T20:37:54.2413129+03:00</timeStamp>
+    <typeFullName>
+      <string>WalkwayFactory</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a0fa6a67a1db25940bd69b78b571f201</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/MapGenerator/MapGenerator.cs</fileName>
+    <timeStamp>2023-09-27T20:21:09.1376813+03:00</timeStamp>
+    <typeFullName>
+      <string>MapGenerator</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e7bcbf42743e8274b9ce95e090dc13b9</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/ObstacleGenerators/FactoryManager.cs</fileName>
+    <timeStamp>2023-07-25T23:13:04.3983195+03:00</timeStamp>
+    <typeFullName>
+      <string>FactoryManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a2cdd0251474fdd488272bdbf6b4f5fe</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/ObstacleGenerators/ObsFactory.cs</fileName>
+    <timeStamp>2023-09-19T20:46:05.8064043+03:00</timeStamp>
+    <typeFullName>
+      <string>ObsFactory</string>
+      <string>ObsFactory+ObstacleType</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d21a1ccb052cbb542b69d26a3b7bbd56</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/ObstacleGenerators/ObsFactorySectionTwo.cs</fileName>
+    <timeStamp>2023-09-12T21:14:12.1238961+03:00</timeStamp>
+    <typeFullName>
+      <string>ObsFactorySectionTwo</string>
+      <string>ObsFactorySectionTwo+ObstacleType</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>4a212f88ace064741ab55f9ef6cd87b8</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/ObstacleGenerators/ObsSpawner.cs</fileName>
+    <timeStamp>2023-09-27T19:59:12.735739+03:00</timeStamp>
+    <typeFullName>
+      <string>ObsSpawner</string>
+      <string>ObsSpawner2</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>268fd846b40b62045b179b153a6fb3d9</guid>
+    <fileName>Assets/Assets/Scripts/Managers/Factory/ObstacleGenerators/ObsSpawner2.cs</fileName>
+    <timeStamp>2023-09-24T17:57:11.9080972+03:00</timeStamp>
+    <typeFullName>
+      <string>ObsSpawner2</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>6612c203ff93cc74a9c77f7ba84c54e9</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/SecondSection/MoneyGiver.cs</fileName>
+    <timeStamp>2023-08-19T15:23:45.7388813+03:00</timeStamp>
+    <typeFullName>
+      <string>MoneyGiver</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>6547c6b2d14364e46afe084a3b57feff</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/SecondSection/SpeedGiver.cs</fileName>
+    <timeStamp>2023-08-13T21:57:53.855414+03:00</timeStamp>
+    <typeFullName>
+      <string>SpeedGiver</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1883a856531ae4e48ac2c0607230c93f</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/SecondSection/WeightReducer.cs</fileName>
+    <timeStamp>2023-08-14T21:16:27.2987378+03:00</timeStamp>
+    <typeFullName>
+      <string>WeightReducer</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>3c5d23ee2b409e74e8a297c82e9eb8d4</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Takers/WallObstacle.cs</fileName>
+    <timeStamp>2023-10-25T22:41:40.2840071+03:00</timeStamp>
+    <typeFullName>
+      <string>WallObstacle</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>bbd28890e425d574e996ba5f8450a4ca</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Takers/WallStart.cs</fileName>
+    <timeStamp>2023-10-02T18:45:23.6882386+03:00</timeStamp>
+    <typeFullName>
+      <string>WallStart</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e423bb62e94e0db47b58813d5e5c6fde</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/Classic/HealthGiver.cs</fileName>
+    <timeStamp>2023-08-14T22:07:21.7970597+03:00</timeStamp>
+    <typeFullName>
+      <string>HealthGiver</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>10e74a300fd06f6428c1e5ce6fd2a885</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/Classic/ShieldGiver.cs</fileName>
+    <timeStamp>2023-08-14T22:07:26.6012092+03:00</timeStamp>
+    <typeFullName>
+      <string>ShieldGiver</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b9068eecec1c3a343a72bc38cd21324a</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/Road_Canvas.cs</fileName>
+    <timeStamp>2023-08-20T13:51:26.0289663+03:00</timeStamp>
+    <typeFullName>
+      <string>Road_Canvas</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d73a572034fa8324e8b4b04d06aa2c7d</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/SecondSectionSmallOnes/MoneyGiverFirst.cs</fileName>
+    <timeStamp>2023-09-10T20:22:09.8832869+03:00</timeStamp>
+    <typeFullName>
+      <string>MoneyGiverFirst</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>7cbf35aa26b9df74d837fa493ad0128c</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/SecondSectionSmallOnes/SpeedGiverFirst.cs</fileName>
+    <timeStamp>2023-08-14T21:37:50.1692844+03:00</timeStamp>
+    <typeFullName>
+      <string>SpeedGiverFirst</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>dba1153e96b08b44482f1661e510fd2d</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/SecondSectionSmallOnes/WeightReducerFirst.cs</fileName>
+    <timeStamp>2023-08-14T21:38:00.9979159+03:00</timeStamp>
+    <typeFullName>
+      <string>WeightReducerFirst</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>01ffc923ed8432d4f998f2b6a39d8d42</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/HealthGiverRoad/HealthGiverCollision.cs</fileName>
+    <timeStamp>2023-08-21T21:45:50.9659815+03:00</timeStamp>
+    <typeFullName>
+      <string>HealthGiverCollision</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ce4ad0a72e201e041818fa859521395c</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/HealthGiverRoad/HealthGiverRoad.cs</fileName>
+    <timeStamp>2023-08-20T13:35:27.1292385+03:00</timeStamp>
+    <typeFullName>
+      <string>HealthGiverRoad</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>57fc10f6dd41e764dbec29a3feece306</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/MoneyGiverRoad/MoneyGiverCollision.cs</fileName>
+    <timeStamp>2023-08-21T21:59:38.3543668+03:00</timeStamp>
+    <typeFullName>
+      <string>MoneyGiverCollision</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>0163ad2ee7476da408ba1f138bd196f9</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/MoneyGiverRoad/MoneyGiverRoad.cs</fileName>
+    <timeStamp>2023-08-21T21:57:15.3945147+03:00</timeStamp>
+    <typeFullName>
+      <string>MoneyGiverRoad</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f1fec65f615a5954ea599ad53ff30195</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/ShieldGiverRoad/ShieldGiverCollision.cs</fileName>
+    <timeStamp>2023-08-21T21:45:43.3782654+03:00</timeStamp>
+    <typeFullName>
+      <string>ShieldGiverCollision</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>6c0b1c08692d04b4b9242160dc4f707c</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/ShieldGiverRoad/ShieldGiverRoad.cs</fileName>
+    <timeStamp>2023-08-20T14:10:56.5600582+03:00</timeStamp>
+    <typeFullName>
+      <string>ShieldGiverRoad</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5faddc1fb265ac74fb8433e3cb74e9fe</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/SpeedGiverRoad/SpeedGiverCollider.cs</fileName>
+    <timeStamp>2023-08-21T21:46:32.0613047+03:00</timeStamp>
+    <typeFullName>
+      <string>SpeedGiverCollider</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>049f92fdc5a45164eb68c3c14d9a518a</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/SpeedGiverRoad/SpeedGiverRoad.cs</fileName>
+    <timeStamp>2023-08-19T21:17:16.4105029+03:00</timeStamp>
+    <typeFullName>
+      <string>SpeedGiverRoad</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>3f89b8ae278e5dd49be28e8fe7848d7b</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/WeightReducerRoad/WeightReducerCollision.cs</fileName>
+    <timeStamp>2023-08-21T21:46:02.1384771+03:00</timeStamp>
+    <typeFullName>
+      <string>WeightReducerCollision</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>6580879c4010f3642b65a996cc634def</guid>
+    <fileName>Assets/Assets/Scripts/Obstacles/Sections/FirstSection/Givers/RoadObstacles/WeightReducerRoad/WeightReducerRoad.cs</fileName>
+    <timeStamp>2023-08-20T13:43:38.5541385+03:00</timeStamp>
+    <typeFullName>
+      <string>WeightReducerRoad</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+</ArrayOfTypeDate>
